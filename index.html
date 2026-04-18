@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,119 +6,142 @@
 <title>PointCraft Interiors</title>
 
 <style>
-body{
-margin:0;
-font-family: Arial, sans-serif;
-background:#f8f6f3;
-color:#333;
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f8f6f3;
 }
 
-header{
-display:flex;
-justify-content:space-between;
-padding:20px 40px;
-background:white;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+/* NAVBAR */
+nav {
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+  background:white;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  position:sticky;
+  top:0;
+}
+nav h2 {margin:0;}
+nav ul {
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+nav ul li {
+  cursor:pointer;
 }
 
-.hero{
-background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
-height:80vh;
-display:flex;
-align-items:center;
-padding:40px;
-color:#000;
+/* HERO */
+.hero {
+  height:90vh;
+  background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+  display:flex;
+  align-items:center;
+  padding-left:50px;
+}
+.hero h1 {
+  font-size:40px;
+  max-width:500px;
 }
 
-.hero h1{
-font-size:40px;
-max-width:500px;
+/* BUTTONS */
+.btn {
+  padding:12px 20px;
+  background:#c8a96a;
+  border:none;
+  color:white;
+  margin-right:10px;
+  cursor:pointer;
 }
 
-.btn{
-padding:10px 20px;
-margin-right:10px;
-border:none;
-background:#c89b3c;
-color:white;
-cursor:pointer;
+/* SERVICES */
+.section {
+  padding:60px 20px;
+  text-align:center;
+}
+.cards {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.card {
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.section{
-padding:50px;
-text-align:center;
+/* GALLERY */
+.gallery img {
+  width:300px;
+  border-radius:10px;
 }
 
-.services{
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-width:200px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
-
-.before-after{
-display:flex;
-gap:20px;
-justify-content:center;
-}
-
-.before-after img{
-width:45%;
-border-radius:10px;
-}
-
-footer{
-background:#222;
-color:white;
-text-align:center;
-padding:20px;
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  background:#222;
+  color:white;
 }
 </style>
-
 </head>
 
 <body>
 
-<header>
-<h2>PointCraft Interiors</h2>
-</header>
+<!-- NAVBAR -->
+<nav>
+  <h2>PointCraft Interiors</h2>
+  <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Gallery</li>
+    <li>Contact</li>
+  </ul>
+</nav>
 
-<section class="hero">
-<div>
-<h1>Transform Your Space with PointCraft Interiors</h1>
-<button class="btn">Call Now</button>
-<button class="btn">WhatsApp</button>
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Transform Your Space with PointCraft Interiors</h1>
+    <button class="btn">Call Now</button>
+    <button class="btn">WhatsApp</button>
+  </div>
 </div>
-</section>
 
-<section class="section">
-<h2>Our Services</h2>
-<div class="services">
-<div class="card">Modular Kitchen</div>
-<div class="card">Wardrobe</div>
-<div class="card">Full Interior</div>
-<div class="card">Steel Work</div>
+<!-- SERVICES -->
+<div class="section">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card">Modular Kitchen</div>
+    <div class="card">Wardrobe</div>
+    <div class="card">Full Interior</div>
+    <div class="card">Steel Work (Railings etc.)</div>
+  </div>
 </div>
-</section>
 
-<section class="section">
-<h2>Before & After</h2>
-<div class="before-after">
-<img src="https://images.unsplash.com/photo-1556911220-bff31c812dba">
-<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
+<!-- GALLERY -->
+<div class="section">
+  <h2>Our Work</h2>
+  <div class="cards gallery">
+    <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf">
+    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea">
+    <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4">
+  </div>
 </div>
-</section>
 
+<!-- CONTACT -->
+<div class="section">
+  <h2>Contact Us</h2>
+  <p>Call / WhatsApp: +91 XXXXX XXXXX</p>
+</div>
+
+<!-- FOOTER -->
 <footer>
-<p>© 2026 PointCraft Interiors</p>
+  © 2026 PointCraft Interiors | All Rights Reserved
 </footer>
 
 </body>
