@@ -6,153 +6,218 @@
 <title>PointCraft Interiors</title>
 
 <style>
-body { margin:0; font-family: Arial; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
 /* HEADER */
-header{
-  background: linear-gradient(to right,#000,#111);
-  display:flex; justify-content:space-between; align-items:center;
-  padding:15px 40px;
+header {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
 }
-.logo{ display:flex; align-items:center; gap:10px; }
-.logo img{ height:50px; }
-.logo h1{ color:#fff; margin:0; font-size:20px; }
-.logo span{ color:gold; }
 
-nav a{
-  color:#fff; text-decoration:none; margin-left:25px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-text span {
+    color: gold;
+}
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
 }
 
 /* HERO */
-.hero{
-  height:400px;
-  background:url("Hero.jpg") center/cover no-repeat;
-  display:flex; align-items:center; justify-content:center;
+.hero {
+    height: 80vh;
+    background: url('Hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.hero h2{
-  background:rgba(0,0,0,0.6);
-  color:#fff; padding:15px 30px; border-radius:10px;
+
+.hero h1 {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
 }
 
 /* SERVICES */
-.services{
-  background:#c9d7e1;
-  padding:40px; text-align:center;
+.services {
+    padding: 60px;
+    text-align: center;
+    background: #d9e6f2;
 }
-.cards{
-  display:flex; justify-content:center; gap:20px; flex-wrap:wrap;
-}
-.card{
-  background:#fff; border-radius:12px; overflow:hidden;
-}
-.card img{ width:250px; display:block; }
-.card p{ padding:10px; margin:0; }
 
-/* OUR WORK */
-.work{
-  padding:50px; text-align:center; background:#f7f7f7;
+.service-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.work-grid{
-  display:flex; justify-content:center; gap:20px; flex-wrap:wrap;
+
+.card {
+    width: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
 }
-.work-grid img{
-  width:300px; border-radius:12px;
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* OUR WORK (UPDATED BG) */
+.work {
+    padding: 60px;
+    text-align: center;
+    background: #fff6cc; /* 🔥 LIGHT YELLOW */
+}
+
+.work-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.work img {
+    width: 300px;
+    border-radius: 15px;
 }
 
 /* BEFORE AFTER */
-.before-after{
-  padding:50px; text-align:center;
-}
-.ba-grid{
-  display:flex; justify-content:center; gap:20px; flex-wrap:wrap;
-}
-.ba-box{ text-align:center; }
-.ba-box img{
-  width:300px; border-radius:12px;
+.before-after {
+    padding: 60px;
+    text-align: center;
 }
 
-/* FOOTER — ONLY PHONE & EMAIL */
-footer{
-  background:#000; color:#fff; text-align:center; padding:25px;
+.ba-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.ba-container img {
+    width: 300px;
+    border-radius: 12px;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
 }
 </style>
+
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <div class="logo">
-    <img src="logo1.png" alt="logo">
-    <h1>Point<span>Craft</span> Interiors</h1>
-  </div>
+    <div class="logo">
+        <img src="logo1.png">
+        <div class="logo-text">
+            Point<span>Craft</span> Interiors
+        </div>
+    </div>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Gallery</a>
-    <a href="#">Contact</a>
-  </nav>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h2>Design Your Dream Space</h2>
+    <h1>Design Your Dream Space</h1>
 </section>
 
+<!-- SERVICES -->
 <section class="services">
-  <h2>Our Services</h2>
+    <h2>Our Services</h2>
 
-  <div class="cards">
-    <div class="card">
-      <img src="Kitchen.jpg" alt="Modular Kitchen">
-      <p>Modular Kitchen</p>
-    </div>
+    <div class="service-box">
+        <div class="card">
+            <img src="Kitchen.jpg">
+            <p>Modular Kitchen</p>
+        </div>
 
-    <div class="card">
-      <img src="Wardrobe.jpg" alt="Wardrobe">
-      <p>Wardrobe</p>
-    </div>
+        <div class="card">
+            <img src="Wardrobe.jpg">
+            <p>Wardrobe</p>
+        </div>
 
-    <div class="card">
-      <img src="Interior.jpg" alt="Full Interior">
-      <p>Full Interior</p>
-    </div>
+        <div class="card">
+            <img src="Interior.jpg">
+            <p>Full Interior</p>
+        </div>
 
-    <div class="card">
-      <img src="Railing.jpg" alt="Steel Work">
-      <p>Steel Work</p>
+        <div class="card">
+            <img src="Railing.jpg">
+            <p>Steel Work</p>
+        </div>
     </div>
-  </div>
 </section>
 
+<!-- OUR WORK (UPDATED ONLY BG) -->
 <section class="work">
-  <h2>Our Work</h2>
+    <h2>Our Work</h2>
 
-  <div class="work-grid">
-    <img src="Kitchen2.jpg" alt="">
-    <img src="Wardrobe2.jpg" alt="">
-    <img src="Interiors.jpg" alt="">
-  </div>
+    <div class="work-box">
+        <img src="Kitchen2.jpg">
+        <img src="Wardrobe2.jpg">
+        <img src="Interiors.jpg">
+    </div>
 </section>
 
+<!-- BEFORE AFTER -->
 <section class="before-after">
-  <h2>Before & After</h2>
+    <h2>Before & After</h2>
 
-  <div class="ba-grid">
-    <div class="ba-box">
-      <p>Before</p>
-      <img src="Interior.jpg" alt="">
-    </div>
+    <div class="ba-container">
+        <div>
+            <p>Before</p>
+            <img src="Before.png">
+        </div>
 
-    <div class="ba-box">
-      <p>After</p>
-      <img src="Interior.jpg" alt="">
+        <div>
+            <p>After</p>
+            <img src="After.png">
+        </div>
     </div>
-  </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>📞 9953251355</p>
-  <p>✉️ pointcraftinteriors@gmail.com</p>
+    © 2026 PointCraft Interiors
 </footer>
 
 </body>
