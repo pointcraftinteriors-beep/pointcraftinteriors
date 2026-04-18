@@ -1,196 +1,141 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PointCraft Interiors</title>
 
 <style>
-body{
-margin:0;
-font-family:Arial;
-background:#f8f6f2;
-color:#333;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* NAVBAR (DARK PREMIUM) */
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 60px;
-background:linear-gradient(135deg,#0f0f0f,#1c1c1c,#000000);
-box-shadow:0 4px 15px rgba(0,0,0,0.4);
+/* HEADER */
+header {
+    background: #000; /* BLACK HEADER */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
 }
 
-/* LOGO */
-.logo img{
-height:55px;
+/* LOGO SECTION */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* NAV LINKS */
-nav ul{
-list-style:none;
-display:flex;
-gap:25px;
+.logo img {
+    height: 50px;
 }
 
-nav a{
-text-decoration:none;
-color:#f5f5f5;   /* WHITE TEXT */
-font-weight:500;
+.logo h1 {
+    color: #fff; /* WHITE TEXT */
+    font-size: 22px;
+    margin: 0;
 }
 
-nav a:hover{
-color:#c8a96a;   /* GOLD HOVER */
+.logo span {
+    color: gold; /* CRAFT GOLD */
+}
+
+/* NAV */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
 }
 
 /* HERO */
-.hero{
-height:450px;
-background:url('Hero.jpg') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+.hero {
+    height: 400px;
+    background: url("Hero.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hero h1{
-font-size:42px;
-color:white;
-background:rgba(0,0,0,0.5);
-padding:12px 25px;
-border-radius:10px;
+.hero h2 {
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 10px;
 }
 
-/* SERVICES */
-.services{
-text-align:center;
-padding:60px 20px;
-background:#f3efe9;
+/* SERVICES SECTION */
+.services {
+    background: #e6f4ff; /* LIGHT SKY BG */
+    padding: 40px;
+    text-align: center;
 }
 
-.cards{
-display:flex;
-gap:25px;
-justify-content:center;
-flex-wrap:wrap;
+.services h2 {
+    margin-bottom: 30px;
 }
 
-.card{
-background:#ffffff;
-border-radius:12px;
-overflow:hidden;
-width:260px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s;
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.card:hover{
-transform:translateY(-5px);
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
-}
-
-.card h3{
-padding:15px;
-}
-
-/* WORK */
-.work{
-text-align:center;
-padding:60px 20px;
-}
-
-.work img{
-width:300px;
-border-radius:12px;
-margin:10px;
-}
-
-/* CONTACT */
-.contact{
-background:#ebe5dc;
-text-align:center;
-padding:40px;
+.card img {
+    width: 200px;
+    border-radius: 10px;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<header>
+    <div class="logo">
+        <img src="logo1.png" alt="logo">
+        <h1>Point<span>Craft</span> Interiors</h1>
+    </div>
 
-<nav>
-<div class="logo">
-<img src="logo.png">
-</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
 
-<ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Gallery</a></li>
-<li><a href="#">Contact</a></li>
-</ul>
-</nav>
+<section class="hero">
+    <h2>Design Your Dream Space</h2>
+</section>
 
-<!-- HERO -->
+<section class="services">
+    <h2>Our Services</h2>
 
-<div class="hero">
-<h1>Design Your Dream Space</h1>
-</div>
+    <div class="cards">
+        <div class="card">
+            <img src="Kitchen.jpg">
+        </div>
 
-<!-- SERVICES -->
+        <div class="card">
+            <img src="Wardrobe.jpg">
+        </div>
 
-<div class="services">
-<h2>Our Services</h2>
+        <div class="card">
+            <img src="Interior.jpg">
+        </div>
 
-<div class="cards">
-<div class="card">
-<img src="Kitchen.jpg">
-<h3>Modular Kitchen</h3>
-</div>
-
-<div class="card">
-<img src="Wardrobe.jpg">
-<h3>Wardrobe</h3>
-</div>
-
-<div class="card">
-<img src="Interior.jpg">
-<h3>Full Interior</h3>
-</div>
-
-<div class="card">
-<img src="Railing.jpg">
-<h3>Steel Work</h3>
-</div>
-</div>
-</div>
-
-<!-- WORK -->
-
-<div class="work">
-<h2>Our Work</h2>
-
-<img src="Kitchen2.jpg">
-<img src="Wardrobe2.jpg">
-<img src="Interiors.jpg">
-
-</div>
-
-<!-- CONTACT -->
-
-<div class="contact">
-<h2>Contact Us</h2>
-<p>Phone: 9876543210</p>
-<p>Email: pointcraft@gmail.com</p>
-</div>
+        <div class="card">
+            <img src="Railing.jpg">
+        </div>
+    </div>
+</section>
 
 </body>
 </html>
