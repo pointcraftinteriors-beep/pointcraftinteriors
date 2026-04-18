@@ -11,7 +11,7 @@ body {
     font-family: Arial;
 }
 
-/* HEADER */
+/* HEADER SAME */
 header {
     background: linear-gradient(to right, #000, #111);
     display:flex;
@@ -30,7 +30,7 @@ nav a {
     text-decoration:none;
 }
 
-/* HERO */
+/* HERO SAME */
 .hero {
     height:400px;
     background:url("Hero.jpg") center/cover no-repeat;
@@ -46,21 +46,9 @@ nav a {
     border-radius:10px;
 }
 
-/* BRAND STRIP */
-.brand {
-    text-align:center;
-    background:black;
-    color:white;
-    padding:20px;
-}
-
-.brand span {
-    color:gold;
-}
-
-/* SERVICES */
+/* SERVICES SAME */
 .services {
-    background:#c9d7e1;
+    background:#f2ebe5;
     padding:40px;
     text-align:center;
 }
@@ -85,7 +73,7 @@ nav a {
     padding:10px;
 }
 
-/* WORK */
+/* OUR WORK */
 .work {
     padding:50px;
     text-align:center;
@@ -103,7 +91,7 @@ nav a {
     border-radius:12px;
 }
 
-/* BEFORE AFTER */
+/* BEFORE AFTER (FIXED LOGIC) */
 .before-after {
     padding:50px;
     text-align:center;
@@ -115,17 +103,25 @@ nav a {
     gap:20px;
 }
 
-.ba-grid img {
+.ba-box {
+    text-align:center;
+}
+
+.ba-box img {
     width:300px;
     border-radius:12px;
 }
 
-/* FOOTER */
+/* FOOTER (ONLY PLACE FOR CONTACT) */
 footer {
     background:black;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
+}
+
+footer span {
+    color:gold;
 }
 </style>
 
@@ -148,11 +144,6 @@ footer {
 
 <section class="hero">
     <h2>Design Your Dream Space</h2>
-</section>
-
-<section class="brand">
-    <h2>Point<span>Craft</span> Interiors</h2>
-    <p>9953251355 | pointcraftinteriors@gmail.com</p>
 </section>
 
 <section class="services">
@@ -195,13 +186,22 @@ footer {
     <h2>Before & After</h2>
 
     <div class="ba-grid">
-        <img src="Interior.jpg">
-        <img src="Kitchen.jpg">
+        <div class="ba-box">
+            <p>Before</p>
+            <img src="Interior.jpg">
+        </div>
+
+        <div class="ba-box">
+            <p>After</p>
+            <img src="Interior.jpg">
+        </div>
     </div>
 </section>
 
 <footer>
-    © PointCraft Interiors | All Rights Reserved
+    <h3>Point<span>Craft</span> Interiors</h3>
+    <p>📞 9953251355</p>
+    <p>✉️ pointcraftinteriors@gmail.com</p>
 </footer>
 
 </body>
