@@ -89,41 +89,23 @@ nav a {
     object-fit: cover;
 }
 
-/* OUR WORK */
-.work {
+/* SAME COLOR FOR BOTH */
+.work, .before-after {
     padding: 60px;
     text-align: center;
-    background: #fff6cc;
+    background: #f5f1e8; /* 🔥 ONE PREMIUM COLOR */
 }
 
-.work-box {
+.work-box, .ba-container {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
 
-.work img {
+.work img, .ba-container img {
     width: 300px;
     border-radius: 15px;
-}
-
-/* BEFORE AFTER (🔥 FIXED BG) */
-.before-after {
-    padding: 60px;
-    text-align: center;
-    background: #f3f7ff; /* 🔥 SOFT LIGHT BLUE */
-}
-
-.ba-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-.ba-container img {
-    width: 300px;
-    border-radius: 12px;
 }
 
 /* FOOTER */
@@ -132,6 +114,10 @@ footer {
     color: white;
     text-align: center;
     padding: 30px;
+}
+
+footer p {
+    margin: 5px 0;
 }
 </style>
 
@@ -212,7 +198,9 @@ footer {
 </section>
 
 <footer>
-    © 2026 PointCraft Interiors
+    <h3>Point<span style="color:gold;">Craft</span> Interiors</h3>
+    <p>📞 9953251355</p>
+    <p>📧 pointcraftinteriors@gmail.com</p>
 </footer>
 
 </body>
