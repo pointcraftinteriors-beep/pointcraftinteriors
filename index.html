@@ -8,7 +8,7 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 /* HEADER */
@@ -89,18 +89,23 @@ nav a {
     object-fit: cover;
 }
 
-/* ABOUT */
+/* 🔥 ABOUT (UPGRADED) */
 .about {
-    padding: 60px;
-    background: #ffffff;
+    padding: 70px;
+    background: linear-gradient(to right, #fdfcfb, #e2d1c3);
     text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
 .about-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
     flex-wrap: wrap;
     margin-top: 30px;
 }
@@ -108,11 +113,19 @@ nav a {
 .about-text {
     max-width: 500px;
     text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-text b {
+    color: #000;
 }
 
 .about-img img {
     width: 350px;
     border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* SAME COLOR */
@@ -211,18 +224,22 @@ footer p {
     </div>
 </section>
 
+<!-- 🔥 PROFESSIONAL ABOUT -->
 <section class="about">
     <h2>About Us</h2>
 
     <div class="about-box">
         <div class="about-text">
             <p>
-                At <b>PointCraft Interiors</b>, we create modern and functional interior spaces.
-                From modular kitchens to complete home interiors, we bring your vision to life.
+                <b>PointCraft Interiors</b> is dedicated to transforming living spaces
+                into modern, functional, and aesthetically pleasing environments.
+                We specialize in modular kitchens, wardrobes, and complete home interiors.
             </p>
 
             <p>
-                We focus on quality, smart design, and customer satisfaction.
+                Our approach combines smart space planning, premium materials,
+                and expert craftsmanship to deliver designs that reflect your lifestyle.
+                We focus on quality, timely delivery, and customer satisfaction.
             </p>
         </div>
 
