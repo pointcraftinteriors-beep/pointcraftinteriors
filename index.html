@@ -11,7 +11,7 @@ body {
     font-family: Arial;
 }
 
-/* HEADER SAME */
+/* HEADER */
 header {
     background: linear-gradient(to right, #000, #111);
     display:flex;
@@ -20,22 +20,8 @@ header {
     padding:15px 40px;
 }
 
-.logo {
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
 .logo img {
     height:50px;
-}
-
-.logo-text {
-    color:white;
-}
-
-.logo-text span {
-    color:gold;
 }
 
 nav a {
@@ -44,7 +30,7 @@ nav a {
     text-decoration:none;
 }
 
-/* HERO SAME */
+/* HERO */
 .hero {
     height:400px;
     background:url("Hero.jpg") center/cover no-repeat;
@@ -60,9 +46,21 @@ nav a {
     border-radius:10px;
 }
 
-/* SERVICES SAME */
+/* BRAND STRIP */
+.brand {
+    text-align:center;
+    background:black;
+    color:white;
+    padding:20px;
+}
+
+.brand span {
+    color:gold;
+}
+
+/* SERVICES */
 .services {
-    background:#f2ebe5;
+    background:#c9d7e1;
     padding:40px;
     text-align:center;
 }
@@ -87,7 +85,7 @@ nav a {
     padding:10px;
 }
 
-/* OUR WORK (SAME STYLE LIKE BEFORE) */
+/* WORK */
 .work {
     padding:50px;
     text-align:center;
@@ -101,6 +99,23 @@ nav a {
 }
 
 .work-grid img {
+    width:300px;
+    border-radius:12px;
+}
+
+/* BEFORE AFTER */
+.before-after {
+    padding:50px;
+    text-align:center;
+}
+
+.ba-grid {
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.ba-grid img {
     width:300px;
     border-radius:12px;
 }
@@ -121,10 +136,6 @@ footer {
 <header>
     <div class="logo">
         <img src="logo1.png">
-        <div class="logo-text">
-            <b>Point<span>Craft</span> Interiors</b><br>
-            <small>9953251355 | pointcraftinteriors@gmail.com</small>
-        </div>
     </div>
 
     <nav>
@@ -137,6 +148,11 @@ footer {
 
 <section class="hero">
     <h2>Design Your Dream Space</h2>
+</section>
+
+<section class="brand">
+    <h2>Point<span>Craft</span> Interiors</h2>
+    <p>9953251355 | pointcraftinteriors@gmail.com</p>
 </section>
 
 <section class="services">
@@ -165,7 +181,6 @@ footer {
     </div>
 </section>
 
-<!-- RESTORED OUR WORK SAME LOOK -->
 <section class="work">
     <h2>Our Work</h2>
 
@@ -173,6 +188,15 @@ footer {
         <img src="Kitchen2.jpg">
         <img src="Wardrobe2.jpg">
         <img src="Interiors.jpg">
+    </div>
+</section>
+
+<section class="before-after">
+    <h2>Before & After</h2>
+
+    <div class="ba-grid">
+        <img src="Interior.jpg">
+        <img src="Kitchen.jpg">
     </div>
 </section>
 
