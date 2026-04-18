@@ -170,7 +170,24 @@ footer {
 }
 
 footer p {
-    margin: 5px 0;
+  margin: 5px 0;
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.whatsapp-float a {
+  background: #25D366;
+  color: white;
+  font-size: 30px;
+  padding: 18px 22px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: inline-block;
 }
 </style>
 
@@ -276,9 +293,11 @@ footer p {
 </section>
 
 <footer>
-    <p>📞 9953251355</p>
     <p>📧 pointcraftinteriors@gmail.com</p>
 </footer>
+    <div class="whatsapp-float">
+  <a href="https://wa.me/919953251355" target="_blank">💬</a>
+</div>
 
 </body>
 </html>
