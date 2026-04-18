@@ -89,21 +89,61 @@ nav a {
     object-fit: cover;
 }
 
-/* SAME COLOR FOR BOTH */
+/* ABOUT */
+.about {
+    padding: 60px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.about-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-img img {
+    width: 350px;
+    border-radius: 15px;
+}
+
+/* SAME COLOR */
 .work, .before-after {
     padding: 60px;
     text-align: center;
-    background: #f5f1e8; /* 🔥 ONE PREMIUM COLOR */
+    background: #f5f1e8;
 }
 
-.work-box, .ba-container {
+/* WORK */
+.work-box {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
 
-.work img, .ba-container img {
+.work img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+/* BEFORE AFTER */
+.ba-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.ba-container img {
     width: 300px;
     border-radius: 15px;
 }
@@ -171,6 +211,27 @@ footer p {
     </div>
 </section>
 
+<section class="about">
+    <h2>About Us</h2>
+
+    <div class="about-box">
+        <div class="about-text">
+            <p>
+                At <b>PointCraft Interiors</b>, we create modern and functional interior spaces.
+                From modular kitchens to complete home interiors, we bring your vision to life.
+            </p>
+
+            <p>
+                We focus on quality, smart design, and customer satisfaction.
+            </p>
+        </div>
+
+        <div class="about-img">
+            <img src="Interior.jpg">
+        </div>
+    </div>
+</section>
+
 <section class="work">
     <h2>Our Work</h2>
 
@@ -198,7 +259,6 @@ footer p {
 </section>
 
 <footer>
-    <h3>Point<span style="color:gold;">Craft</span> Interiors</h3>
     <p>📞 9953251355</p>
     <p>📧 pointcraftinteriors@gmail.com</p>
 </footer>
