@@ -7,119 +7,113 @@
 
 <style>
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    margin:0;
+    font-family: Arial;
 }
 
-/* HEADER */
+/* HEADER SAME */
 header {
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 40px;
+    background: linear-gradient(to right, #000, #111);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .logo img {
-    height: 55px;
+    height:50px;
 }
 
-.logo-text h1 {
-    margin: 0;
-    color: #fff;
-    font-size: 20px;
+.logo-text {
+    color:white;
 }
 
 .logo-text span {
-    color: gold;
-}
-
-.logo-text p {
-    margin: 0;
-    font-size: 12px;
-    color: #ccc;
+    color:gold;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 25px;
+    color:white;
+    margin-left:25px;
+    text-decoration:none;
 }
 
-/* HERO */
+/* HERO SAME */
 .hero {
-    height: 420px;
-    background: url("Hero.jpg") center/cover no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height:400px;
+    background:url("Hero.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .hero h2 {
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 10px;
+    background:rgba(0,0,0,0.6);
+    color:white;
+    padding:15px 30px;
+    border-radius:10px;
 }
 
-/* SERVICES */
+/* SERVICES SAME */
 .services {
-    background: #e6f4ff;
-    padding: 50px;
-    text-align: center;
+    background:#f2ebe5;
+    padding:40px;
+    text-align:center;
 }
 
 .cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.card {
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
 }
 
 .card img {
-    width: 220px;
-    border-radius: 10px;
+    width:250px;
 }
 
-/* OUR WORK */
+.card p {
+    padding:10px;
+}
+
+/* OUR WORK (SAME STYLE LIKE BEFORE) */
 .work {
-    padding: 50px;
-    text-align: center;
-    background: #f5f5f5;
+    padding:50px;
+    text-align:center;
+    background:#f7f7f7;
 }
 
-.work img {
-    width: 280px;
-    margin: 10px;
-    border-radius: 10px;
+.work-grid {
+    display:flex;
+    justify-content:center;
+    gap:20px;
 }
 
-/* BEFORE AFTER */
-.before-after {
-    padding: 50px;
-    text-align: center;
-}
-
-.before-after img {
-    width: 300px;
-    margin: 10px;
-    border-radius: 10px;
+.work-grid img {
+    width:300px;
+    border-radius:12px;
 }
 
 /* FOOTER */
 footer {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+    background:black;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 </style>
+
 </head>
 
 <body>
@@ -128,8 +122,8 @@ footer {
     <div class="logo">
         <img src="logo1.png">
         <div class="logo-text">
-            <h1>Point<span>Craft</span> Interiors</h1>
-            <p>📞 9953251355 | ✉ pointcraftinteriors@gmail.com</p>
+            <b>Point<span>Craft</span> Interiors</b><br>
+            <small>9953251355 | pointcraftinteriors@gmail.com</small>
         </div>
     </div>
 
@@ -149,28 +143,41 @@ footer {
     <h2>Our Services</h2>
 
     <div class="cards">
-        <div class="card"><img src="Kitchen.jpg"></div>
-        <div class="card"><img src="Wardrobe.jpg"></div>
-        <div class="card"><img src="Interior.jpg"></div>
-        <div class="card"><img src="Railing.jpg"></div>
+        <div class="card">
+            <img src="Kitchen.jpg">
+            <p>Modular Kitchen</p>
+        </div>
+
+        <div class="card">
+            <img src="Wardrobe.jpg">
+            <p>Wardrobe</p>
+        </div>
+
+        <div class="card">
+            <img src="Interior.jpg">
+            <p>Full Interior</p>
+        </div>
+
+        <div class="card">
+            <img src="Railing.jpg">
+            <p>Steel Work</p>
+        </div>
     </div>
 </section>
 
+<!-- RESTORED OUR WORK SAME LOOK -->
 <section class="work">
     <h2>Our Work</h2>
-    <img src="Kitchen2.jpg">
-    <img src="Wardrobe2.jpg">
-    <img src="Interiors.jpg">
-</section>
 
-<section class="before-after">
-    <h2>Before & After</h2>
-    <img src="Kitchen.jpg">
-    <img src="Kitchen2.jpg">
+    <div class="work-grid">
+        <img src="Kitchen2.jpg">
+        <img src="Wardrobe2.jpg">
+        <img src="Interiors.jpg">
+    </div>
 </section>
 
 <footer>
-    © 2026 PointCraft Interiors | All Rights Reserved
+    © PointCraft Interiors | All Rights Reserved
 </footer>
 
 </body>
