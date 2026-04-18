@@ -10,71 +10,86 @@ body {
 margin:0;
 font-family: Arial;
 
-/* PREMIUM BEIGE BG */
-background:linear-gradient(135deg,#f5f1eb,#efe7dc,#e6dccf);
+/* EXACT PREMIUM CREAM BG */
+background:#f8f6f2;
+color:#333;
 }
 
 /* NAVBAR */
 nav{
 display:flex;
 justify-content:space-between;
-padding:20px 50px;
-background:white;
+align-items:center;
+padding:20px 60px;
+background:#ffffff;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-nav h2{margin:0;}
+nav h2{
+margin:0;
+font-weight:600;
+}
 
 nav ul{
 list-style:none;
 display:flex;
-gap:20px;
+gap:25px;
 }
 
 nav a{
 text-decoration:none;
-color:#444;
+color:#555;
 font-weight:500;
 }
 
 /* HERO */
 .hero{
-height:420px;
+height:450px;
 background:url('Hero.jpg') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
-color:white;
 text-align:center;
 }
 
 .hero h1{
 font-size:42px;
+color:white;
 background:rgba(0,0,0,0.5);
 padding:12px 25px;
-border-radius:8px;
+border-radius:10px;
 }
 
-/* SERVICES */
+/* SERVICES SECTION */
 .services{
 text-align:center;
-padding:50px;
-background:transparent;
+padding:60px 20px;
+background:#f3efe9;
+}
+
+.services h2{
+margin-bottom:30px;
+font-size:28px;
 }
 
 .cards{
 display:flex;
-gap:20px;
+gap:25px;
 justify-content:center;
 flex-wrap:wrap;
 }
 
 .card{
-background:#ffffffcc;
-backdrop-filter:blur(5px);
+background:#ffffff;
 border-radius:12px;
 overflow:hidden;
-width:250px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
+width:260px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
 }
 
 .card img{
@@ -85,33 +100,39 @@ object-fit:cover;
 
 .card h3{
 padding:15px;
-color:#333;
 }
 
 /* WORK */
 .work{
 text-align:center;
-padding:50px;
+padding:60px 20px;
+background:#f8f6f2;
 }
 
 .work img{
 width:300px;
 border-radius:12px;
 margin:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* CONTACT */
 .contact{
-background:#e6dccf;
-color:#333;
+background:#ebe5dc;
 text-align:center;
 padding:40px;
+}
+
+.contact h2{
+margin-bottom:10px;
 }
 </style>
 
 </head>
 
 <body>
+
+<!-- NAVBAR -->
 
 <nav>
 <h2>PointCraft Interiors</h2>
@@ -123,14 +144,19 @@ padding:40px;
 </ul>
 </nav>
 
+<!-- HERO -->
+
 <div class="hero">
 <h1>Design Your Dream Space</h1>
 </div>
+
+<!-- SERVICES -->
 
 <div class="services">
 <h2>Our Services</h2>
 
 <div class="cards">
+
 <div class="card">
 <img src="Kitchen.jpg">
 <h3>Modular Kitchen</h3>
@@ -150,8 +176,11 @@ padding:40px;
 <img src="Railing.jpg">
 <h3>Steel Work</h3>
 </div>
+
 </div>
 </div>
+
+<!-- WORK -->
 
 <div class="work">
 <h2>Our Work</h2>
@@ -161,6 +190,8 @@ padding:40px;
 <img src="Interiors.jpg">
 
 </div>
+
+<!-- CONTACT -->
 
 <div class="contact">
 <h2>Contact Us</h2>
