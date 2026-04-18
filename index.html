@@ -13,32 +13,38 @@ body {
 
 /* HEADER */
 header {
-    background: #000; /* BLACK HEADER */
+    background: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 12px 40px;
 }
 
-/* LOGO SECTION */
+/* LOGO */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .logo img {
-    height: 50px;
+    height: 55px;
 }
 
-.logo h1 {
-    color: #fff; /* WHITE TEXT */
-    font-size: 22px;
+.logo-text h1 {
     margin: 0;
+    color: #fff;
+    font-size: 20px;
 }
 
-.logo span {
-    color: gold; /* CRAFT GOLD */
+.logo-text span {
+    color: gold;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 12px;
+    color: #ccc;
 }
 
 /* NAV */
@@ -51,11 +57,11 @@ nav a {
 
 /* HERO */
 .hero {
-    height: 400px;
+    height: 420px;
     background: url("Hero.jpg") center/cover no-repeat;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .hero h2 {
@@ -65,10 +71,10 @@ nav a {
     border-radius: 10px;
 }
 
-/* SERVICES SECTION */
+/* SERVICES */
 .services {
-    background: #e6f4ff; /* LIGHT SKY BG */
-    padding: 40px;
+    background: #e6f4ff;
+    padding: 50px;
     text-align: center;
 }
 
@@ -80,17 +86,26 @@ nav a {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .card {
     background: white;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
 }
 
 .card img {
-    width: 200px;
+    width: 220px;
     border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
 </style>
 </head>
@@ -99,8 +114,11 @@ nav a {
 
 <header>
     <div class="logo">
-        <img src="logo1.png" alt="logo">
-        <h1>Point<span>Craft</span> Interiors</h1>
+        <img src="logo1.png">
+        <div class="logo-text">
+            <h1>Point<span>Craft</span> Interiors</h1>
+            <p>📞 9953251355 | ✉ pointcraftinteriors@gmail.com</p>
+        </div>
     </div>
 
     <nav>
@@ -136,6 +154,10 @@ nav a {
         </div>
     </div>
 </section>
+
+<footer>
+    © 2026 PointCraft Interiors | All Rights Reserved
+</footer>
 
 </body>
 </html>
