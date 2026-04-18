@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - PointCraft Interiors</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-text span {
+    color: gold;
+}
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+/* GALLERY */
+.gallery {
+    padding: 60px;
+    text-align: center;
+    background: #f5f1e8;
+}
+
+.gallery h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.gallery-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.gallery-box img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.gallery-box img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo1.png">
+        <div class="logo-text">
+            Point<span>Craft</span> Interiors
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="gallery">
+    <h2>Our Work Gallery</h2>
+
+    <div class="gallery-box">
+        <img src="Kitchen.jpg">
+        <img src="Kitchen2.jpg">
+        <img src="Wardrobe.jpg">
+        <img src="Wardrobe2.jpg">
+        <img src="Interior.jpg">
+        <img src="Interiors.jpg">
+        <img src="Railing.jpg">
+    </div>
+</section>
+
+<footer>
+    <p>📞 9953251355</p>
+    <p>📧 pointcraftinteriors@gmail.com</p>
+</footer>
+
+</body>
+</html>
