@@ -7,86 +7,116 @@
 
 <style>
 body {
-  margin:0;
+  margin: 0;
   font-family: Arial, sans-serif;
-  background:#f8f6f3;
+  background: #f6f6f6;
 }
 
 /* NAVBAR */
 nav {
-  display:flex;
-  justify-content:space-between;
-  padding:20px 50px;
-  background:white;
-  box-shadow:0 2px 10px rgba(0,0,0,0.1);
-  position:sticky;
-  top:0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
 }
-nav h2 {margin:0;}
+
+nav h2 { margin: 0; }
+
 nav ul {
-  list-style:none;
-  display:flex;
-  gap:20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
+
 nav ul li {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 /* HERO */
 .hero {
-  height:90vh;
-  background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
-  display:flex;
-  align-items:center;
-  padding-left:50px;
-}
-.hero h1 {
-  font-size:40px;
-  max-width:500px;
+  height: 70vh;
+  background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  color: white;
 }
 
-/* BUTTONS */
+.hero h1 {
+  font-size: 40px;
+  max-width: 500px;
+}
+
 .btn {
-  padding:12px 20px;
-  background:#c8a96a;
-  border:none;
-  color:white;
-  margin-right:10px;
-  cursor:pointer;
+  padding: 12px 20px;
+  background: #c8a96a;
+  border: none;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  text-align: center;
 }
 
 /* SERVICES */
-.section {
-  padding:60px 20px;
-  text-align:center;
-}
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 10px;
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-}
 .card {
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+  width: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 8px 0;
 }
 
 /* GALLERY */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
 .gallery img {
-  width:300px;
-  border-radius:10px;
+  width: 300px;
+  border-radius: 10px;
 }
 
 /* FOOTER */
 footer {
-  text-align:center;
-  padding:20px;
-  background:#222;
-  color:white;
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
 }
 </style>
 </head>
@@ -110,39 +140,45 @@ footer {
   <div>
     <h1>Transform Your Space with PointCraft Interiors</h1>
     <button class="btn">Call Now</button>
-    <button class="btn">WhatsApp</button>
+    <a href="https://wa.me/9198XXXXXXXX" target="_blank">
+      <button class="btn">WhatsApp</button>
+    </a>
   </div>
 </div>
 
 <!-- SERVICES -->
 <div class="section">
   <h2>Our Services</h2>
+
   <div class="cards">
 
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" style="width:100%;height:150px;object-fit:cover;border-radius:10px;">
-    <p>Modular Kitchen</p>
-  </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+      <p>Modular Kitchen</p>
+    </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0" style="width:100%;height:150px;object-fit:cover;border-radius:10px;">
-    <p>Wardrobe</p>
-  </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0">
+      <p>Wardrobe</p>
+    </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" style="width:100%;height:150px;object-fit:cover;border-radius:10px;">
-    <p>Full Interior</p>
-  </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d">
+      <p>Full Interior</p>
+    </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1598300053653-59a9a1f23a5d" style="width:100%;height:150px;object-fit:cover;border-radius:10px;">
-    <p>Steel Work (Railings etc.)</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1598300053653-59a9a1f23a5d">
+      <p>Steel Work</p>
+    </div>
+
   </div>
 </div>
 
 <!-- GALLERY -->
 <div class="section">
   <h2>Our Work</h2>
-  <div class="cards gallery">
+  <div class="gallery">
     <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf">
     <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea">
     <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4">
