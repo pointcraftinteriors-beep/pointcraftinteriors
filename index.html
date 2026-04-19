@@ -50,11 +50,20 @@ nav a { color:white; margin-left:20px; text-decoration:none; }
     background:white;
     border-radius:10px;
     overflow:hidden;
+    transition:0.3s;
+}
+.card:hover {
+    transform:translateY(-10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 .card img {
     width:100%;
     height:150px;
     object-fit:cover;
+    transition:0.3s;
+}
+.card:hover img {
+    transform:scale(1.05);
 }
 .card a {
     display:block;
@@ -132,7 +141,7 @@ footer {
     position:fixed;
     width:100%;
     height:100%;
-    background:black;
+    background:rgba(0,0,0,0.9);
     display:none;
     justify-content:center;
     align-items:center;
@@ -199,8 +208,8 @@ footer {
 <h2>About Us</h2>
 <div class="about-box">
 <div>
-<p><b>PointCraft Interiors</b> transforms your space into modern designs.</p>
-<p>We specialize in kitchens, wardrobes, and full interiors.</p>
+<p><b>PointCraft Interiors</b> creates modern and functional designs.</p>
+<p>We specialize in kitchens, wardrobes, and home interiors.</p>
 </div>
 <img src="Interior.jpg">
 </div>
