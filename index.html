@@ -102,11 +102,58 @@ transform:scale(1.05);
 display:block;
 margin:10px;
 padding:8px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
+  /* WORK PREMIUM DESIGN */
+
+.work {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.work h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.work-box {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.work-card {
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.work-card:hover {
+  transform: translateY(-8px);
+}
+
+.work-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.work-content {
+  padding: 15px;
+}
+
+.work-content h3 {
+  margin: 10px 0;
+  color: #222;
+}
+
+.work-content p {
+  font-size: 14px;
+  color: #555;
+}
+
 }
 
 /* ABOUT */
@@ -227,6 +274,53 @@ font-size:26px;
 padding:15px 18px;
 border-radius:50%;
 text-decoration:none;
+  /* BEFORE AFTER PREMIUM */
+.before-after {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.before-after h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.ba-slider {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.ba-slider img {
+  width: 100%;
+  display: block;
+}
+
+.ba-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.ba-overlay img {
+  width: 100%;
+}
+
+.ba-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: white;
+  border: 2px solid #25D366;
+  cursor: ew-resize;
+}
 }
 </style>
 </head>
@@ -296,21 +390,50 @@ text-decoration:none;
 
 <section class="work">
 <h2>Our Work</h2>
+
 <div class="work-box">
-<img src="Kitchen2.jpg" onclick="openImage(this.src)">
-<img src="Wardrobe2.jpg" onclick="openImage(this.src)">
-<img src="Interiors.jpg" onclick="openImage(this.src)">
+
+<div class="work-card">
+<img src="Kitchen2.jpg">
+<div class="work-content">
+<h3>Modern Kitchen</h3>
+<p>Affordable modular kitchens with premium finish and smart storage.</p>
+</div>
+</div>
+
+<div class="work-card">
+<img src="Wardrobe2.jpg">
+<div class="work-content">
+<h3>Luxury Wardrobe</h3>
+<p>Space-saving wardrobes designed with modern sliding systems.</p>
+</div>
+</div>
+
+<div class="work-card">
+<img src="Interiors.jpg">
+<div class="work-content">
+<h3>Full Interior</h3>
+<p>Complete home interior solutions at budget-friendly pricing.</p>
+</div>
+</div>
+
 </div>
 </section>
-
 <section class="before-after">
-<h2>Before & After</h2>
-<div class="ba-container">
-<img src="Before.png">
-<img src="After.png">
-</div>
-</section>
+  <h2>Before & After Transformation</h2>
 
+  <div class="ba-slider">
+    <img src="After.png" alt="After">
+
+    <div class="ba-overlay">
+      <img src="Before.png" alt="Before">
+    </div>
+
+    <div class="ba-handle"></div>
+  </div>
+
+</section>
+  
 <section class="contact">
 <h2>Contact Us</h2>
 <p>Email: pointcraftinteriors@gmail.com</p>
@@ -339,6 +462,34 @@ document.getElementById("lightbox-img").src=src;
 function closeImage(){
 document.getElementById("lightbox").style.display="none";
 }
+  const slider = document.querySelector(".ba-slider");
+const overlay = document.querySelector(".ba-overlay");
+const handle = document.querySelector(".ba-handle");
+
+let isDragging = false;
+
+handle.addEventListener("mousedown", () => {
+  isDragging = true;
+});
+
+window.addEventListener("mouseup", () => {
+  isDragging = false;
+});
+
+window.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  let rect = slider.getBoundingClientRect();
+  let x = e.clientX - rect.left;
+
+  if (x < 0) x = 0;
+  if (x > rect.width) x = rect.width;
+
+  let percent = (x / rect.width) * 100;
+
+  overlay.style.width = percent + "%";
+  handle.style.left = percent + "%";
+});
 </script>
 
 </body>
