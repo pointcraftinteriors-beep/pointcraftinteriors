@@ -45,8 +45,9 @@ nav a {
 /* HERO */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Hero.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-new.jpg');
     background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,6 +140,16 @@ nav a {
     justify-content: center;
 }
 
+.about-text {
+    max-width: 520px;
+    text-align: left;
+    line-height: 1.7;
+}
+
+.about-text h3 {
+    font-size: 24px;
+}
+
 .about-img img {
     width: 350px;
     border-radius: 15px;
@@ -146,16 +157,28 @@ nav a {
 
 /* WORK */
 .work {
-    padding: 60px;
+    padding: 60px 20px;
     text-align: center;
     background: #f5f1e8;
 }
 
+.work-box {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
 .work-box img {
     width: 300px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 15px;
-    margin: 10px;
-    cursor: pointer;
+    transition: 0.3s;
+}
+
+.work-box img:hover {
+    transform: scale(1.05);
 }
 
 /* BEFORE AFTER */
@@ -220,7 +243,7 @@ footer a {
 <header>
     <div class="logo">
         <img src="logo1.png">
-        <div>Point<span>Craft</span> Interiors</div>
+        <div class="logo-text">Point<span>Craft</span> Interiors</div>
     </div>
 
     <nav>
@@ -231,6 +254,7 @@ footer a {
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
     <div>
         <h1>Transform Your Home with Expert Interior Design</h1>
@@ -241,6 +265,7 @@ footer a {
     </div>
 </section>
 
+<!-- TRUST -->
 <section class="trust">
     <div class="trust-box">
         <p>100+ Projects Completed</p>
@@ -250,6 +275,7 @@ footer a {
     </div>
 </section>
 
+<!-- SERVICES -->
 <section class="services">
     <h2>Our Services</h2>
     <div class="service-box">
@@ -279,43 +305,40 @@ footer a {
     </div>
 </section>
 
+<!-- ABOUT -->
 <section class="about">
     <h2>About Us</h2>
 
     <div class="about-box">
-
         <div class="about-text">
             <h3>Designing Spaces That Reflect Your Lifestyle</h3>
 
-            <p>
-                <b>PointCraft Interiors</b> is a professional interior design company
-                dedicated to transforming ordinary spaces into modern, functional,
-                and visually stunning environments.
-            </p>
+            <p><b>PointCraft Interiors</b> is a professional interior design company dedicated to transforming spaces into modern, functional, and visually appealing environments.</p>
 
-            <p>
-                We specialize in <b>modular kitchens, wardrobes, and complete home interiors</b>,
-                delivering customized solutions tailored to your needs and budget.
-            </p>
+            <p>We specialize in <b>modular kitchens, wardrobes, and complete home interiors</b>, delivering customized solutions tailored to your needs and budget.</p>
 
-            <p>
-                With a strong focus on <b>quality materials, smart space planning,
-                and expert craftsmanship</b>, we ensure every project meets the highest
-                standards of design and durability.
-            </p>
+            <p>With a focus on <b>quality materials, smart planning, and expert craftsmanship</b>, we ensure long-lasting and premium results.</p>
 
-            <p>
-                Our mission is simple — to provide <b>beautiful, practical, and affordable interiors</b>
-                while maintaining transparency, timely delivery, and complete customer satisfaction.
-            </p>
+            <p>Our mission is to provide <b>affordable, stylish, and practical interiors</b> with timely delivery and complete customer satisfaction.</p>
         </div>
 
         <div class="about-img">
             <img src="Interior.jpg">
         </div>
-
     </div>
 </section>
+
+<!-- WORK -->
+<section class="work">
+    <h2>Our Work</h2>
+    <div class="work-box">
+        <img src="Kitchen2.jpg">
+        <img src="Wardrobe2.jpg">
+        <img src="Interiors.jpg">
+    </div>
+</section>
+
+<!-- BEFORE AFTER -->
 <section class="before-after">
     <h2>Before & After</h2>
     <div class="ba-container">
@@ -330,6 +353,7 @@ footer a {
     </div>
 </section>
 
+<!-- TESTIMONIAL -->
 <section class="testimonials">
     <h2>What Our Clients Say</h2>
     <div class="testimonial-box">
@@ -342,11 +366,13 @@ footer a {
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
     <p>📧 pointcraftinteriors@gmail.com</p>
     <p>📞 <a href="tel:9953251355">+91 9953251355</a></p>
 </footer>
 
+<!-- WHATSAPP -->
 <div class="whatsapp-float">
   <a href="https://wa.me/919953251355?text=Hi%20I%20want%20interior%20design">💬</a>
 </div>
