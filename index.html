@@ -6,80 +6,144 @@
 <title>PointCraft Interiors</title>
 
 <style>
-body { margin:0; font-family:'Segoe UI'; }
+body { margin:0; font-family:'Segoe UI', Arial; }
 
 /* HEADER */
 header {
-display:flex;justify-content:space-between;
-padding:15px 50px;background:black;color:white;
+    background:#000;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    padding:15px 50px;
 }
-
-nav a {color:white;margin-left:25px;text-decoration:none;}
+nav a { color:white; margin-left:20px; text-decoration:none; }
 
 /* HERO */
 .hero {
-height:80vh;
-background:url('hero3.jpg') center/cover no-repeat;
-display:flex;align-items:center;justify-content:center;
+    height:80vh;
+    background:url('hero3.jpg') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 .hero h1 {
-background:rgba(0,0,0,0.5);
-color:white;padding:15px 30px;border-radius:10px;
+    background:rgba(0,0,0,0.5);
+    color:white;
+    padding:15px 30px;
+    border-radius:10px;
 }
 
 /* SERVICES */
 .services {
-padding:60px;text-align:center;background:#d9e6f2;
+    padding:60px;
+    text-align:center;
+    background:#d9e6f2;
 }
 .service-box {
-display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
 }
-.card { width:220px;background:white;border-radius:10px;overflow:hidden; }
-.card img { width:100%; height:150px; object-fit:cover; }
+.card {
+    width:220px;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+}
+.card img {
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+.card a {
+    display:block;
+    margin:10px;
+    padding:8px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
 
 /* ABOUT */
 .about {
-padding:70px;background:#eee;text-align:center;
+    padding:60px;
+    text-align:center;
+    background:#eee;
 }
 .about-box {
-display:flex;gap:40px;justify-content:center;flex-wrap:wrap;
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
 }
-.about-img img { width:300px;border-radius:10px; }
+.about img { width:300px; border-radius:10px; }
 
 /* WORK */
-.work,.before-after {
-padding:60px;text-align:center;background:#f5f1e8;
+.work {
+    padding:60px;
+    text-align:center;
+    background:#f5f1e8;
 }
 .work-box {
-display:flex;gap:25px;justify-content:center;flex-wrap:wrap;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 .work img {
-width:300px;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;
+    width:300px;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+    cursor:pointer;
 }
 
 /* BEFORE AFTER */
+.before-after {
+    padding:60px;
+    text-align:center;
+    background:#f5f1e8;
+}
 .ba-container {
-display:flex;gap:25px;justify-content:center;flex-wrap:wrap;
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 .ba-container img {
-width:300px;height:200px;object-fit:cover;border-radius:10px;
+    width:300px;
+    height:200px;
+    object-fit:cover;
 }
 
 /* FOOTER */
 footer {
-background:black;color:white;text-align:center;padding:30px;
+    background:black;
+    color:white;
+    text-align:center;
+    padding:30px;
 }
 
 /* LIGHTBOX */
 #lightbox {
-position:fixed;width:100%;height:100%;
-background:black;display:none;justify-content:center;align-items:center;
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:black;
+    display:none;
+    justify-content:center;
+    align-items:center;
 }
 #lightbox img { max-width:90%; }
 
 /* WHATSAPP */
 .whatsapp-float {
-position:fixed;bottom:20px;right:20px;
+    position:fixed;
+    bottom:20px;
+    right:20px;
 }
 </style>
 </head>
@@ -102,35 +166,30 @@ position:fixed;bottom:20px;right:20px;
 
 <section class="services">
 <h2>Our Services</h2>
-
 <div class="service-box">
 
 <div class="card">
-<a href="https://wa.me/919953251355?text=Kitchen">
 <img src="Kitchen.jpg">
-</a>
 <p>Modular Kitchen</p>
+<a href="https://wa.me/919953251355?text=Kitchen">Enquiry</a>
 </div>
 
 <div class="card">
-<a href="https://wa.me/919953251355?text=Wardrobe">
 <img src="Wardrobe.jpg">
-</a>
 <p>Wardrobe</p>
+<a href="https://wa.me/919953251355?text=Wardrobe">Enquiry</a>
 </div>
 
 <div class="card">
-<a href="https://wa.me/919953251355?text=Interior">
 <img src="Interior.jpg">
-</a>
 <p>Full Interior</p>
+<a href="https://wa.me/919953251355?text=Interior">Enquiry</a>
 </div>
 
 <div class="card">
-<a href="https://wa.me/919953251355?text=Steel Work">
 <img src="Railing.jpg">
-</a>
 <p>Steel Work</p>
+<a href="https://wa.me/919953251355?text=Steel Work">Enquiry</a>
 </div>
 
 </div>
@@ -140,12 +199,10 @@ position:fixed;bottom:20px;right:20px;
 <h2>About Us</h2>
 <div class="about-box">
 <div>
-<p><b>PointCraft Interiors</b> creates modern and functional designs.</p>
-<p>We specialize in kitchens, wardrobes, and home interiors.</p>
+<p><b>PointCraft Interiors</b> transforms your space into modern designs.</p>
+<p>We specialize in kitchens, wardrobes, and full interiors.</p>
 </div>
-<div class="about-img">
 <img src="Interior.jpg">
-</div>
 </div>
 </section>
 
@@ -161,8 +218,8 @@ position:fixed;bottom:20px;right:20px;
 <section class="before-after">
 <h2>Before & After</h2>
 <div class="ba-container">
-<div><p>Before</p><img src="Before.png"></div>
-<div><p>After</p><img src="After.png"></div>
+<img src="Before.png">
+<img src="After.png">
 </div>
 </section>
 
