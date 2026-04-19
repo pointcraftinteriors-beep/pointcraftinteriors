@@ -9,7 +9,6 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
-    padding-bottom: 80px;
 }
 
 /* HEADER */
@@ -55,36 +54,11 @@ nav a {
     color: white;
 }
 
-.hero h1 {
-    font-size: 48px;
-    max-width: 700px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin: 15px 0;
-}
-
-.btn {
-    background: #25D366;
-    padding: 12px 25px;
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 /* TRUST */
 .trust {
-    background: #f8f8f8;
     padding: 40px;
     text-align: center;
-}
-
-.trust-box {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    background: #f8f8f8;
 }
 
 /* SERVICES */
@@ -103,94 +77,25 @@ nav a {
 
 .card {
     width: 220px;
-    border-radius: 12px;
-    overflow: hidden;
     background: white;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.card a {
-    display: block;
-    padding: 10px;
-    color: green;
-    text-decoration: none;
 }
 
 /* ABOUT */
 .about {
-    padding: 70px;
-    background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+    padding: 60px;
     text-align: center;
-}
-
-.about-box {
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.about-text {
-    max-width: 520px;
-    text-align: left;
-    line-height: 1.7;
-}
-
-.about-img img {
-    width: 350px;
-    border-radius: 15px;
 }
 
 /* WORK */
 .work {
-    padding: 60px 20px;
+    padding: 60px;
     text-align: center;
-    background: #f5f1e8;
-}
-
-.work-box {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.work-box img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    cursor: pointer;
 }
 
 /* BEFORE AFTER */
 .before-after {
     padding: 60px;
     text-align: center;
-    background: #f5f1e8;
-}
-
-.ba-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.ba-container img {
-    width: 300px;
-    border-radius: 15px;
 }
 
 /* TESTIMONIAL */
@@ -199,30 +104,20 @@ nav a {
     text-align: center;
 }
 
-.testimonial-box {
-    background: white;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 400px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
 /* FOOTER */
 footer {
     background: black;
     color: white;
     text-align: center;
-    padding: 40px;
+    padding: 30px;
 }
 
 /* LIGHTBOX */
 #lightbox {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.9);
+    background: black;
     display: none;
     justify-content: center;
     align-items: center;
@@ -230,7 +125,6 @@ footer {
 
 #lightbox img {
     max-width: 90%;
-    max-height: 90%;
 }
 
 /* WHATSAPP */
@@ -239,73 +133,84 @@ footer {
     bottom: 20px;
     right: 20px;
 }
-
-.whatsapp-float a {
-    background: #25D366;
-    color: white;
-    font-size: 30px;
-    padding: 18px 22px;
-    border-radius: 50%;
-}
 </style>
-
 </head>
 
 <body>
 
 <header>
-    <div class="logo">
-        <img src="logo1.png">
-        <div class="logo-text">Point<span>Craft</span> Interiors</div>
-    </div>
+<div class="logo">
+<img src="logo1.png">
+<div class="logo-text">Point<span>Craft</span> Interiors</div>
+</div>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-    <div>
-        <h1>Transform Your Home with Expert Interior Design</h1>
-        <p>Affordable | Modern | Customized Interiors</p>
-        <a href="https://wa.me/919953251355?text=Hi%20I%20want%20interior%20design" class="btn">
-            Get Free Consultation
-        </a>
-    </div>
+<h1>Design Your Dream Space</h1>
+</section>
+
+<section class="trust">
+<h2>100+ Projects | Affordable | Premium</h2>
+</section>
+
+<section class="services">
+<h2>Services</h2>
+<div class="service-box">
+<div class="card"><img src="Kitchen.jpg"><p>Kitchen</p></div>
+<div class="card"><img src="Wardrobe.jpg"><p>Wardrobe</p></div>
+<div class="card"><img src="Interior.jpg"><p>Interior</p></div>
+</div>
+</section>
+
+<section class="about">
+<h2>About Us</h2>
+<p>PointCraft Interiors transforms your space into premium modern designs.</p>
 </section>
 
 <section class="work">
-    <h2>Our Work</h2>
-    <div class="work-box">
-        <img src="Kitchen2.jpg" onclick="openImage(this.src)">
-        <img src="Wardrobe2.jpg" onclick="openImage(this.src)">
-        <img src="Interiors.jpg" onclick="openImage(this.src)">
-    </div>
+<h2>Our Work</h2>
+<img src="Kitchen2.jpg" onclick="openImage(this.src)">
+<img src="Wardrobe2.jpg" onclick="openImage(this.src)">
+</section>
+
+<section class="before-after">
+<h2>Before & After</h2>
+<img src="Before.png">
+<img src="After.png">
+</section>
+
+<section class="testimonials">
+<h2>Clients</h2>
+<p>Great work and service!</p>
 </section>
 
 <footer>
-    <p>pointcraftinteriors@gmail.com</p>
-    <p>+91 9953251355</p>
+<p>pointcraftinteriors@gmail.com</p>
+<p>9953251355</p>
 </footer>
 
 <div id="lightbox" onclick="closeImage()">
-    <img id="lightbox-img">
+<img id="lightbox-img">
 </div>
 
 <div class="whatsapp-float">
-  <a href="https://wa.me/919953251355">💬</a>
+<a href="https://wa.me/919953251355">💬</a>
 </div>
 
 <script>
-function openImage(src) {
-    document.getElementById("lightbox").style.display = "flex";
-    document.getElementById("lightbox-img").src = src;
+function openImage(src){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=src;
 }
-function closeImage() {
-    document.getElementById("lightbox").style.display = "none";
+function closeImage(){
+document.getElementById("lightbox").style.display="none";
 }
 </script>
 
