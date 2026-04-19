@@ -1,155 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery - PointCraft Interiors</title>
+<title>Gallery</title>
 
 <style>
-body {
-margin:0;
-font-family:'Segoe UI', sans-serif;
-}
+body{margin:0;font-family:sans-serif}
 
 /* HEADER */
-header {
-background:black;
-color:white;
-display:flex;
-justify-content:space-between;
-align-items:center;
+header{
+background:black;color:white;
+display:flex;justify-content:space-between;
 padding:15px 40px;
 }
-
-.logo {
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo img {
-height:40px;
-}
-
-.logo-text span {
-color:gold;
-}
-
-nav a {
-color:white;
-margin-left:20px;
-text-decoration:none;
-}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:40px}
+.logo span{color:gold}
+nav a{color:white;margin-left:20px;text-decoration:none}
 
 /* GALLERY */
-.gallery {
-padding:80px 60px;
-text-align:center;
-background:#f5f1e8;
-}
+.gallery{padding:60px;background:#f5f1e8;text-align:center}
 
-.gallery h1 {
-margin-bottom:50px;
-font-size:32px;
-}
-
-/* GRID */
-.grid {
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
 }
 
-/* CARD */
-.item {
-height:260px;
-position:relative;
-overflow:hidden;
-border-radius:18px;
-cursor:pointer;
-box-shadow:0 15px 35px rgba(0,0,0,0.15);
-transition:0.3s;
-}
+.item{height:220px;overflow:hidden;border-radius:12px;cursor:pointer}
+.item img{width:100%;height:100%;object-fit:cover}
 
-.item img {
-width:100%;
-height:100%;
-object-fit:cover;
-transition:0.5s;
-}
-
-.item:hover img {
-transform:scale(1.1);
-}
-
-.item:hover {
-transform:translateY(-8px);
-box-shadow:0 25px 50px rgba(0,0,0,0.3);
-}
-
-/* OVERLAY (SAME FOR ALL) */
-.overlay {
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-color:white;
-opacity:0;
-transition:0.3s;
-text-align:center;
-}
-
-.overlay h3 {
-margin:0;
-font-size:22px;
-}
-
-.overlay p {
-margin-top:8px;
-font-size:14px;
-opacity:0.9;
-}
-
-.item:hover .overlay {
-opacity:1;
-}
-
-/* LIGHTBOX */
-#lightbox {
+/* POPUP */
+.popup{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.9);
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.8);
 display:none;
-justify-content:center;
 align-items:center;
+justify-content:center;
 z-index:9999;
 }
 
-#lightbox img {
-max-width:90%;
-max-height:90%;
+.popup-box{
+background:white;
+width:80%;
+height:70%;
+display:flex;
+border-radius:10px;
+overflow:hidden;
 }
 
-/* WHATSAPP */
-.whatsapp {
-position:fixed;
-bottom:20px;
-right:20px;
+/* LEFT IMAGE */
+.popup-img{
+width:60%;
+}
+.popup-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* RIGHT TEXT */
+.popup-content{
+width:40%;
+padding:30px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.popup-content h2{
+margin-bottom:10px;
+}
+
+.popup-content p{
+font-size:14px;
+line-height:1.6;
+}
+
+/* BUTTON */
+.btn{
+margin-top:20px;
 background:#25D366;
 color:white;
-padding:15px;
-border-radius:50%;
-font-size:22px;
+padding:10px;
+text-align:center;
+border-radius:6px;
 text-decoration:none;
+}
+
+/* CLOSE */
+.close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:30px;
+color:white;
+cursor:pointer;
 }
 </style>
 </head>
@@ -159,7 +106,7 @@ text-decoration:none;
 <header>
 <div class="logo">
 <img src="logo1.png">
-<div class="logo-text">Point<span>Craft</span> Interiors</div>
+<div>Point<span>Craft</span> Interiors</div>
 </div>
 
 <nav>
@@ -175,83 +122,55 @@ text-decoration:none;
 
 <div class="grid">
 
-<!-- SAME STRUCTURE FOR ALL -->
-
-<div class="item" onclick="openImg('Kitchen.jpg')">
+<div class="item" onclick="openPopup('Kitchen.jpg','Modular Kitchen','We create premium modular kitchens with smart storage and modern finish.')">
 <img src="Kitchen.jpg">
-<div class="overlay">
-<h3>Interior Design</h3>
-<p>Modern & Premium Finish</p>
-</div>
 </div>
 
-<div class="item" onclick="openImg('Kitchen2.jpg')">
-<img src="Kitchen2.jpg">
-<div class="overlay">
-<h3>Interior Design</h3>
-<p>Modern & Premium Finish</p>
-</div>
-</div>
-
-<div class="item" onclick="openImg('Wardrobe.jpg')">
+<div class="item" onclick="openPopup('Wardrobe.jpg','Wardrobe Design','Luxury wardrobes with modern sliding and space optimization.')">
 <img src="Wardrobe.jpg">
-<div class="overlay">
-<h3>Interior Design</h3>
-<p>Modern & Premium Finish</p>
-</div>
 </div>
 
-<div class="item" onclick="openImg('Wardrobe2.jpg')">
-<img src="Wardrobe2.jpg">
-<div class="overlay">
-<h3>Interior Design</h3>
-<p>Modern & Premium Finish</p>
-</div>
-</div>
-
-<div class="item" onclick="openImg('Interior.jpg')">
+<div class="item" onclick="openPopup('Interior.jpg','Full Interior','Complete home interior solutions with premium quality.')">
 <img src="Interior.jpg">
-<div class="overlay">
-<h3>Interior Design</h3>
-<p>Modern & Premium Finish</p>
-</div>
 </div>
 
-<div class="item" onclick="openImg('Interiors.jpg')">
-<img src="Interiors.jpg">
-<div class="overlay">
-<h3>Interior Design</h3>
-<p>Modern & Premium Finish</p>
-</div>
-</div>
-
-<div class="item" onclick="openImg('Railing.jpg')">
+<div class="item" onclick="openPopup('Railing.jpg','Steel Work','Strong and stylish steel work for modern homes.')">
 <img src="Railing.jpg">
-<div class="overlay">
-<h3>Interior Design</h3>
-<p>Modern & Premium Finish</p>
-</div>
 </div>
 
 </div>
 </section>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeImg()">
-<img id="imgbox">
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="close" onclick="closePopup()">×</div>
+
+<div class="popup-box">
+
+<div class="popup-img">
+<img id="popup-img">
 </div>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/919953251355">💬</a>
+<div class="popup-content">
+<h2 id="popup-title"></h2>
+<p id="popup-text"></p>
+
+<a class="btn" href="https://wa.me/919953251355">Enquire on WhatsApp</a>
+</div>
+
+</div>
+</div>
 
 <script>
-function openImg(src){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("imgbox").src=src;
+function openPopup(img,title,text){
+document.getElementById("popup").style.display="flex";
+document.getElementById("popup-img").src=img;
+document.getElementById("popup-title").innerText=title;
+document.getElementById("popup-text").innerText=text;
 }
 
-function closeImg(){
-document.getElementById("lightbox").style.display="none";
+function closePopup(){
+document.getElementById("popup").style.display="none";
 }
 </script>
 
