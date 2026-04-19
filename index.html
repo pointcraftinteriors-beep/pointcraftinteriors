@@ -9,6 +9,7 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
+    padding-bottom: 80px;
 }
 
 /* HEADER */
@@ -31,11 +32,6 @@ header {
     height: 45px;
 }
 
-.logo-text {
-    font-size: 20px;
-    font-weight: bold;
-}
-
 .logo-text span {
     color: gold;
 }
@@ -48,18 +44,45 @@ nav a {
 
 /* HERO */
 .hero {
-    height: 80vh;
-    background: url('Hero.jpg') center/cover no-repeat;
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('Hero.jpg');
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    color: white;
 }
 
 .hero h1 {
-    background: rgba(0,0,0,0.5);
+    font-size: 45px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+.btn {
+    background: #25D366;
+    padding: 12px 25px;
     color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* TRUST */
+.trust {
+    background: #f8f8f8;
+    padding: 40px;
+    text-align: center;
+}
+
+.trust-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 /* SERVICES */
@@ -81,6 +104,12 @@ nav a {
     border-radius: 12px;
     overflow: hidden;
     background: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -89,71 +118,51 @@ nav a {
     object-fit: cover;
 }
 
-/* 🔥 ABOUT (UPGRADED) */
+.card a {
+    display: block;
+    padding: 10px;
+    color: green;
+    text-decoration: none;
+}
+
+/* ABOUT */
 .about {
     padding: 70px;
     background: linear-gradient(to right, #fdfcfb, #e2d1c3);
     text-align: center;
 }
 
-.about h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
 .about-box {
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 50px;
     flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.about-text {
-    max-width: 500px;
-    text-align: left;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-}
-
-.about-text b {
-    color: #000;
+    justify-content: center;
 }
 
 .about-img img {
     width: 350px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* SAME COLOR */
-.work, .before-after {
+/* WORK */
+.work {
     padding: 60px;
     text-align: center;
     background: #f5f1e8;
 }
 
-/* WORK */
-.work-box {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.work img {
+.work-box img {
     width: 300px;
     border-radius: 15px;
+    margin: 10px;
+    cursor: pointer;
 }
 
 /* BEFORE AFTER */
-.ba-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+.before-after {
+    padding: 60px;
+    text-align: center;
+    background: #f5f1e8;
 }
 
 .ba-container img {
@@ -161,33 +170,46 @@ nav a {
     border-radius: 15px;
 }
 
+/* TESTIMONIAL */
+.testimonials {
+    padding: 50px;
+    text-align: center;
+}
+
+.testimonial-box {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
 /* FOOTER */
 footer {
     background: black;
     color: white;
     text-align: center;
-    padding: 30px;
+    padding: 40px;
 }
 
-footer p {
-  margin: 5px 0;
+footer a {
+    color: white;
+    text-decoration: none;
 }
+
+/* WHATSAPP */
 .whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 
 .whatsapp-float a {
-  background: #25D366;
-  color: white;
-  font-size: 30px;
-  padding: 18px 22px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  display: inline-block;
+    background: #25D366;
+    color: white;
+    font-size: 30px;
+    padding: 18px 22px;
+    border-radius: 50%;
 }
 </style>
 
@@ -198,68 +220,71 @@ footer p {
 <header>
     <div class="logo">
         <img src="logo1.png">
-        <div class="logo-text">
-            Point<span>Craft</span> Interiors
-        </div>
+        <div>Point<span>Craft</span> Interiors</div>
     </div>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
     </nav>
 </header>
 
 <section class="hero">
-    <h1>Design Your Dream Space</h1>
+    <div>
+        <h1>Transform Your Home with Expert Interior Design</h1>
+        <p>Affordable | Modern | Customized Interiors</p>
+        <a href="https://wa.me/919953251355?text=Hi%20I%20want%20interior%20design" class="btn">
+            Get Free Consultation
+        </a>
+    </div>
+</section>
+
+<section class="trust">
+    <div class="trust-box">
+        <p>100+ Projects Completed</p>
+        <p>Affordable Pricing</p>
+        <p>Premium Quality</p>
+        <p>On-Time Delivery</p>
+    </div>
 </section>
 
 <section class="services">
     <h2>Our Services</h2>
-
     <div class="service-box">
         <div class="card">
             <img src="Kitchen.jpg">
             <p>Modular Kitchen</p>
+            <a href="https://wa.me/919953251355">Enquire</a>
         </div>
 
         <div class="card">
             <img src="Wardrobe.jpg">
             <p>Wardrobe</p>
+            <a href="https://wa.me/919953251355">Enquire</a>
         </div>
 
         <div class="card">
             <img src="Interior.jpg">
             <p>Full Interior</p>
+            <a href="https://wa.me/919953251355">Enquire</a>
         </div>
 
         <div class="card">
             <img src="Railing.jpg">
             <p>Steel Work</p>
+            <a href="https://wa.me/919953251355">Enquire</a>
         </div>
     </div>
 </section>
 
-<!-- 🔥 PROFESSIONAL ABOUT -->
 <section class="about">
     <h2>About Us</h2>
-
     <div class="about-box">
-        <div class="about-text">
-            <p>
-                <b>PointCraft Interiors</b> is dedicated to transforming living spaces
-                into modern, functional, and aesthetically pleasing environments.
-                We specialize in modular kitchens, wardrobes, and complete home interiors.
-            </p>
-
-            <p>
-                Our approach combines smart space planning, premium materials,
-                and expert craftsmanship to deliver designs that reflect your lifestyle.
-                We focus on quality, timely delivery, and customer satisfaction.
-            </p>
+        <div>
+            <p><b>PointCraft Interiors</b> transforms spaces into modern designs with premium quality and expert craftsmanship.</p>
         </div>
-
         <div class="about-img">
             <img src="Interior.jpg">
         </div>
@@ -268,7 +293,6 @@ footer p {
 
 <section class="work">
     <h2>Our Work</h2>
-
     <div class="work-box">
         <img src="Kitchen2.jpg">
         <img src="Wardrobe2.jpg">
@@ -278,13 +302,11 @@ footer p {
 
 <section class="before-after">
     <h2>Before & After</h2>
-
     <div class="ba-container">
         <div>
             <p>Before</p>
             <img src="Before.png">
         </div>
-
         <div>
             <p>After</p>
             <img src="After.png">
@@ -292,12 +314,25 @@ footer p {
     </div>
 </section>
 
+<section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-box">
+        <p>"Amazing work! My kitchen looks premium now."</p>
+        <h4>- Rahul</h4>
+    </div>
+    <div class="testimonial-box">
+        <p>"Very professional and on-time delivery."</p>
+        <h4>- Ayesha</h4>
+    </div>
+</section>
+
 <footer>
-    <p>📞 +91 9953251355</p>
     <p>📧 pointcraftinteriors@gmail.com</p>
+    <p>📞 <a href="tel:9953251355">+91 9953251355</a></p>
 </footer>
-    <div class="whatsapp-float">
-  <a href="https://wa.me/919953251355" target="_blank">💬</a>
+
+<div class="whatsapp-float">
+  <a href="https://wa.me/919953251355?text=Hi%20I%20want%20interior%20design">💬</a>
 </div>
 
 </body>
