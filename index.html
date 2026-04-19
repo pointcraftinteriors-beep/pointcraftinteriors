@@ -45,9 +45,10 @@ nav a {
 /* HERO */
 .hero {
     height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-new.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero2.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,7 +57,8 @@ nav a {
 }
 
 .hero h1 {
-    font-size: 45px;
+    font-size: 48px;
+    max-width: 700px;
 }
 
 .hero p {
@@ -186,6 +188,13 @@ nav a {
     padding: 60px;
     text-align: center;
     background: #f5f1e8;
+}
+
+.ba-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .ba-container img {
