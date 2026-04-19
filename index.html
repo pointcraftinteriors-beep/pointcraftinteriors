@@ -6,149 +6,44 @@
 <title>PointCraft Interiors</title>
 
 <style>
-body { margin:0; font-family:'Segoe UI', Arial; }
+body { margin:0; font-family:Arial; }
 
 /* HEADER */
 header {
-background:#000;color:#fff;
+background:black;color:white;
 display:flex;justify-content:space-between;
-align-items:center;
 padding:15px 40px;
 }
 
-.logo { display:flex; align-items:center; gap:10px; }
-.logo img { height:40px; }
-
-.logo-text { font-size:20px; font-weight:bold; color:white; }
-.logo-text span { color:gold; }
-
-nav a {
-color:white;
-margin-left:20px;
-text-decoration:none;
-}
+nav a { color:white; margin-left:20px; text-decoration:none; }
 
 /* HERO */
 .hero {
-height:85vh;
-background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-url('https://pointcraftinteriors-beep.github.io/pointcraftinteriors/hero3.jpg');
-background-size: cover;
-background-position: center;
+height:90vh;
+background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+background-size:cover;
 display:flex;
 align-items:center;
 justify-content:center;
-position:relative;
-z-index:2;
 }
 
-.hero h1 {
-color:white;
-font-size:48px;
-text-align:center;
-}
-
-/* SERVICES */
-.services {
-padding:60px;
-text-align:center;
-background:#d9e6f2;
-}
-
-.service-box {
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.card {
-width:280px;
-border-radius:15px;
-overflow:hidden;
-background:white;
-box-shadow:0 8px 25px rgba(0,0,0,0.15);
-transition:0.3s;
-}
-
-.card:hover {
-transform:translateY(-10px);
-}
-
-.card img {
-width:100%;
-height:200px;
-object-fit:cover;
-}
-
-/* ABOUT */
-.about {
-padding:60px;
-text-align:center;
-background:#eee;
-}
-
-.about-box {
-display:flex;
-gap:30px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.about img {
-width:300px;
-border-radius:10px;
-}
-
-/* WORK */
-.work {
-padding:60px;
-text-align:center;
-background:#f5f1e8;
-}
-
-.work-box {
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.work-card {
-width:300px;
-border-radius:15px;
-overflow:hidden;
-background:white;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-}
-
-.work-card img {
-width:100%;
-height:200px;
-object-fit:cover;
-}
+.hero h1 { color:white; font-size:40px; }
 
 /* BEFORE AFTER */
 .before-after {
-padding:60px 20px;
+padding:60px;
 text-align:center;
-background:#f9f9f9;
-margin-top:40px;
 }
 
 .ba-slider {
 position:relative;
-width:60%;
+width:90%;
 max-width:700px;
 margin:auto;
-overflow:hidden;
-border-radius:12px;
 }
 
 .ba-slider img {
 width:100%;
-height:300px;
-object-fit:cover;
 }
 
 .ba-overlay {
@@ -156,14 +51,11 @@ position:absolute;
 top:0;
 left:0;
 width:50%;
-height:100%;
 overflow:hidden;
 }
 
 .ba-overlay img {
 width:100%;
-height:300px;
-object-fit:cover;
 }
 
 .ba-handle {
@@ -172,9 +64,7 @@ top:0;
 left:50%;
 width:4px;
 height:100%;
-background:white;
-border:2px solid #25D366;
-cursor:ew-resize;
+background:#25D366;
 }
 
 /* CONTACT */
@@ -183,28 +73,11 @@ padding:60px;
 text-align:center;
 }
 
-/* FOOTER */
 footer {
 background:black;
 color:white;
+padding:20px;
 text-align:center;
-padding:30px;
-}
-
-/* WHATSAPP */
-.whatsapp-float {
-position:fixed;
-bottom:20px;
-right:20px;
-}
-
-.whatsapp-float a {
-background:#25D366;
-color:white;
-font-size:26px;
-padding:15px 18px;
-border-radius:50%;
-text-decoration:none;
 }
 </style>
 </head>
@@ -212,16 +85,12 @@ text-decoration:none;
 <body>
 
 <header>
-<div class="logo">
-<img src="logo.png">
-<div class="logo-text">Point<span>Craft</span> Interiors</div>
-</div>
-
+<div>PointCraft Interiors</div>
 <nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
+<a href="#">Home</a>
+<a href="#">Services</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
 </nav>
 </header>
 
@@ -230,7 +99,7 @@ text-decoration:none;
 </section>
 
 <section class="before-after">
-<h2>Before & After Transformation</h2>
+<h2>Before & After</h2>
 
 <div class="ba-slider">
 <img src="Before.png">
@@ -239,17 +108,16 @@ text-decoration:none;
 </div>
 <div class="ba-handle"></div>
 </div>
+
 </section>
 
 <section class="contact">
-<h2>Contact Us</h2>
-<p>Email: pointcraftinteriors@gmail.com</p>
-<p>Phone: +91 9953251355</p>
+<h2>Contact</h2>
+<p>+91 9953251355</p>
 </section>
 
 <footer>
-<p>pointcraftinteriors@gmail.com</p>
-<p>+91 9953251355</p>
+<p>PointCraft Interiors</p>
 </footer>
 
 <script>
@@ -259,23 +127,19 @@ const handle = document.querySelector(".ba-handle");
 
 let isDragging = false;
 
-handle.addEventListener("mousedown", () => isDragging = true);
-window.addEventListener("mouseup", () => isDragging = false);
+handle.onmousedown = () => isDragging = true;
+window.onmouseup = () => isDragging = false;
 
-window.addEventListener("mousemove", (e) => {
+window.onmousemove = (e) => {
 if (!isDragging) return;
 
 let rect = slider.getBoundingClientRect();
 let x = e.clientX - rect.left;
 
-if (x < 0) x = 0;
-if (x > rect.width) x = rect.width;
-
 let percent = (x / rect.width) * 100;
-
 overlay.style.width = percent + "%";
 handle.style.left = percent + "%";
-});
+};
 </script>
 
 </body>
