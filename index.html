@@ -48,7 +48,6 @@ nav a {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero3.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,10 +147,6 @@ nav a {
     line-height: 1.7;
 }
 
-.about-text h3 {
-    font-size: 24px;
-}
-
 .about-img img {
     width: 350px;
     border-radius: 15px;
@@ -176,11 +171,7 @@ nav a {
     height: 200px;
     object-fit: cover;
     border-radius: 15px;
-    transition: 0.3s;
-}
-
-.work-box img:hover {
-    transform: scale(1.05);
+    cursor: pointer;
 }
 
 /* BEFORE AFTER */
@@ -224,9 +215,22 @@ footer {
     padding: 40px;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
+/* LIGHTBOX */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
 }
 
 /* WHATSAPP */
@@ -254,84 +258,16 @@ footer a {
         <img src="logo1.png">
         <div class="logo-text">Point<span>Craft</span> Interiors</div>
     </div>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
-    </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
     <div>
         <h1>Transform Your Home with Expert Interior Design</h1>
         <p>Affordable | Modern | Customized Interiors</p>
-        <a href="https://wa.me/919953251355?text=Hi%20I%20want%20interior%20design" class="btn">
-            Get Free Consultation
-        </a>
+        <a href="https://wa.me/919953251355?text=Hi%20I%20want%20interior%20design" class="btn">Get Free Consultation</a>
     </div>
 </section>
 
-<!-- TRUST -->
-<section class="trust">
-    <div class="trust-box">
-        <p>100+ Projects Completed</p>
-        <p>Affordable Pricing</p>
-        <p>Premium Quality</p>
-        <p>On-Time Delivery</p>
-    </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services">
-    <h2>Our Services</h2>
-    <div class="service-box">
-        <div class="card">
-            <img src="Kitchen.jpg">
-            <p>Modular Kitchen</p>
-            <a href="https://wa.me/919953251355">Enquire</a>
-        </div>
-
-        <div class="card">
-            <img src="Wardrobe.jpg">
-            <p>Wardrobe</p>
-            <a href="https://wa.me/919953251355">Enquire</a>
-        </div>
-
-        <div class="card">
-            <img src="Interior.jpg">
-            <p>Full Interior</p>
-            <a href="https://wa.me/919953251355">Enquire</a>
-        </div>
-
-        <div class="card">
-            <img src="Railing.jpg">
-            <p>Steel Work</p>
-            <a href="https://wa.me/919953251355">Enquire</a>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about">
-    <h2>About Us</h2>
-    <div class="about-box">
-        <div class="about-text">
-            <h3>Designing Spaces That Reflect Your Lifestyle</h3>
-            <p><b>PointCraft Interiors</b> is a professional interior design company dedicated to transforming spaces into modern, functional, and visually appealing environments.</p>
-            <p>We specialize in <b>modular kitchens, wardrobes, and complete home interiors</b>, delivering customized solutions tailored to your needs and budget.</p>
-            <p>With a focus on <b>quality materials, smart planning, and expert craftsmanship</b>, we ensure long-lasting and premium results.</p>
-            <p>Our mission is to provide <b>affordable, stylish, and practical interiors</b> with timely delivery and complete customer satisfaction.</p>
-        </div>
-        <div class="about-img">
-            <img src="Interior.jpg">
-        </div>
-    </div>
-</section>
-
-<!-- WORK -->
 <section class="work">
     <h2>Our Work</h2>
     <div class="work-box">
@@ -341,44 +277,28 @@ footer a {
     </div>
 </section>
 
-<!-- BEFORE AFTER -->
-<section class="before-after">
-    <h2>Before & After</h2>
-    <div class="ba-container">
-        <div>
-            <p>Before</p>
-            <img src="Before.png">
-        </div>
-        <div>
-            <p>After</p>
-            <img src="After.png">
-        </div>
-    </div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-box">
-        <p>"Amazing work! My kitchen looks premium now."</p>
-        <h4>- Rahul</h4>
-    </div>
-    <div class="testimonial-box">
-        <p>"Very professional and on-time delivery."</p>
-        <h4>- Ayesha</h4>
-    </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-    <p>📧 pointcraftinteriors@gmail.com</p>
-    <p>📞 <a href="tel:9953251355">+91 9953251355</a></p>
+    <p>pointcraftinteriors@gmail.com</p>
+    <p>+91 9953251355</p>
 </footer>
 
-<!-- WHATSAPP -->
-<div class="whatsapp-float">
-  <a href="https://wa.me/919953251355?text=Hi%20I%20want%20interior%20design">💬</a>
+<div id="lightbox" onclick="closeImage()">
+    <img id="lightbox-img">
 </div>
+
+<div class="whatsapp-float">
+  <a href="https://wa.me/919953251355">💬</a>
+</div>
+
+<script>
+function openImage(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+function closeImage() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
 </body>
 </html>
