@@ -6,132 +6,45 @@
 <title>PointCraft Interiors</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
+body {margin:0;font-family:'Segoe UI';}
 
 /* HEADER */
 header {
-    background: linear-gradient(to right, #000000, #1a1a1a);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
+display:flex;justify-content:space-between;
+padding:15px 40px;background:black;color:white;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    height: 45px;
-}
-
-.logo-text span {
-    color: gold;
-}
-
-nav a {
-    color: white;
-    margin-left: 25px;
-    text-decoration: none;
-}
+nav a {color:white;margin-left:20px;text-decoration:none;}
 
 /* HERO */
 .hero {
-    height: 90vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero3.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+height:90vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('hero3.jpg');
+background-size:cover;display:flex;align-items:center;justify-content:center;
+color:white;text-align:center;
 }
 
-/* TRUST */
-.trust {
-    padding: 40px;
-    text-align: center;
-    background: #f8f8f8;
+/* SECTIONS */
+section {padding:60px;text-align:center;}
+
+.service-box,.work-box,.ba-container {
+display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
 }
 
-/* SERVICES */
-.services {
-    padding: 60px;
-    text-align: center;
-    background: #d9e6f2;
-}
-
-.service-box {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    width: 220px;
-    background: white;
-}
-
-/* ABOUT */
-.about {
-    padding: 60px;
-    text-align: center;
-}
-
-/* WORK */
-.work {
-    padding: 60px;
-    text-align: center;
-}
-
-/* BEFORE AFTER */
-.before-after {
-    padding: 60px;
-    text-align: center;
-}
-
-/* TESTIMONIAL */
-.testimonials {
-    padding: 50px;
-    text-align: center;
-}
-
-/* FOOTER */
-footer {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 30px;
+.card img,.work img,.ba-container img {
+width:300px;border-radius:10px;
 }
 
 /* LIGHTBOX */
 #lightbox {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: black;
-    display: none;
-    justify-content: center;
-    align-items: center;
+position:fixed;width:100%;height:100%;
+background:black;display:none;justify-content:center;align-items:center;
 }
-
-#lightbox img {
-    max-width: 90%;
-}
+#lightbox img {max-width:90%;}
 
 /* WHATSAPP */
 .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+position:fixed;bottom:20px;right:20px;
 }
 </style>
 </head>
@@ -139,11 +52,7 @@ footer {
 <body>
 
 <header>
-<div class="logo">
-<img src="logo1.png">
-<div class="logo-text">Point<span>Craft</span> Interiors</div>
-</div>
-
+<div>PointCraft Interiors</div>
 <nav>
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -152,15 +61,13 @@ footer {
 </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<h1>Design Your Dream Space</h1>
+<h1>Transform Your Home with Interior Design</h1>
 </section>
 
-<section class="trust">
-<h2>100+ Projects | Affordable | Premium</h2>
-</section>
-
-<section class="services">
+<!-- SERVICES -->
+<section>
 <h2>Services</h2>
 <div class="service-box">
 <div class="card"><img src="Kitchen.jpg"><p>Kitchen</p></div>
@@ -169,26 +76,35 @@ footer {
 </div>
 </section>
 
-<section class="about">
+<!-- ABOUT -->
+<section>
 <h2>About Us</h2>
-<p>PointCraft Interiors transforms your space into premium modern designs.</p>
+<p>PointCraft Interiors creates modern, affordable, and premium interior solutions tailored to your lifestyle.</p>
 </section>
 
-<section class="work">
+<!-- WORK -->
+<section>
 <h2>Our Work</h2>
+<div class="work-box">
 <img src="Kitchen2.jpg" onclick="openImage(this.src)">
 <img src="Wardrobe2.jpg" onclick="openImage(this.src)">
+<img src="Interiors.jpg" onclick="openImage(this.src)">
+</div>
 </section>
 
-<section class="before-after">
+<!-- BEFORE AFTER -->
+<section>
 <h2>Before & After</h2>
+<div class="ba-container">
 <img src="Before.png">
 <img src="After.png">
+</div>
 </section>
 
-<section class="testimonials">
+<!-- TESTIMONIAL -->
+<section>
 <h2>Clients</h2>
-<p>Great work and service!</p>
+<p>“Amazing work!”</p>
 </section>
 
 <footer>
