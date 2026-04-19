@@ -16,22 +16,13 @@ align-items:center;
 padding:15px 40px;
 }
 
-.logo {
-display:flex;
-align-items:center;
-gap:10px;
-}
-
+.logo { display:flex; align-items:center; gap:10px; }
 .logo img { height:40px; }
 
 .logo-text { font-size:20px; font-weight:bold; color:white; }
 .logo-text span { color:gold; }
 
-nav a {
-color:white;
-margin-left:20px;
-text-decoration:none;
-}
+nav a { color:white; margin-left:20px; text-decoration:none; }
 
 /* HERO */
 .hero {
@@ -45,11 +36,7 @@ align-items:center;
 justify-content:center;
 }
 
-.hero h1 {
-color:white;
-font-size:48px;
-text-align:center;
-}
+.hero h1 { color:white; font-size:48px; text-align:center; }
 
 /* SERVICES */
 .services {
@@ -112,26 +99,23 @@ justify-content:center;
 flex-wrap:wrap;
 }
 
-.about img {
-width:300px;
-border-radius:10px;
-}
+.about img { width:300px; border-radius:10px; }
 
-/* ✅ WORK IMPROVED */
+/* WORK */
 .work {
 padding:60px;
+text-align:center;
 background:#f5f1e8;
 }
 
-.work-item {
+.work-box {
 display:flex;
-align-items:center;
-gap:30px;
-margin-bottom:40px;
+gap:25px;
+justify-content:center;
 flex-wrap:wrap;
 }
 
-.work-item img {
+.work img {
 width:300px;
 height:200px;
 object-fit:cover;
@@ -139,41 +123,25 @@ border-radius:12px;
 cursor:pointer;
 }
 
-.work-text {
-max-width:400px;
-}
-
-.work-text h3 {
-margin:0 0 10px;
-}
-
-.work-text p {
-color:#555;
-}
-
-/* ✅ BEFORE AFTER IMPROVED */
+/* BEFORE AFTER */
 .before-after {
 padding:60px;
+text-align:center;
 background:#f5f1e8;
 }
 
-.ba-item {
+.ba-container {
 display:flex;
-align-items:center;
 gap:30px;
 justify-content:center;
 flex-wrap:wrap;
 }
 
-.ba-item img {
+.ba-container img {
 width:320px;
 height:220px;
 object-fit:cover;
 border-radius:15px;
-}
-
-.ba-text {
-max-width:400px;
 }
 
 /* CONTACT */
@@ -200,7 +168,7 @@ text-align:center;
 padding:30px;
 }
 
-/* LIGHTBOX */
+/* ✅ IMPROVED LIGHTBOX */
 #lightbox {
 position:fixed;
 top:0;
@@ -214,9 +182,26 @@ align-items:center;
 z-index:9999;
 }
 
-#lightbox img {
+.lightbox-content {
+display:flex;
+gap:30px;
+align-items:center;
 max-width:90%;
+}
+
+#lightbox img {
+max-width:60%;
 max-height:90%;
+}
+
+.lightbox-text {
+color:white;
+max-width:300px;
+}
+
+@media(max-width:768px){
+.lightbox-content { flex-direction:column; }
+#lightbox img { max-width:90%; }
 }
 
 /* WHATSAPP */
@@ -259,7 +244,6 @@ text-decoration:none;
 
 <section class="services">
 <h2>Our Services</h2>
-
 <div class="service-box">
 
 <div class="card">
@@ -300,49 +284,20 @@ text-decoration:none;
 </div>
 </section>
 
-<!-- ✅ WORK SIDE TEXT -->
 <section class="work">
-<h2 style="text-align:center;">Our Work</h2>
-
-<div class="work-item">
+<h2>Our Work</h2>
+<div class="work-box">
 <img src="Kitchen2.jpg" onclick="openImage(this.src)">
-<div class="work-text">
-<h3>Modern Kitchen</h3>
-<p>Premium modular kitchen with clean finish and smart storage.</p>
-</div>
-</div>
-
-<div class="work-item">
 <img src="Wardrobe2.jpg" onclick="openImage(this.src)">
-<div class="work-text">
-<h3>Luxury Wardrobe</h3>
-<p>Space-saving wardrobe with sliding design and premium finish.</p>
-</div>
-</div>
-
-<div class="work-item">
 <img src="Interiors.jpg" onclick="openImage(this.src)">
-<div class="work-text">
-<h3>Full Interior</h3>
-<p>Complete home transformation with modern aesthetic look.</p>
 </div>
-</div>
-
 </section>
 
-<!-- ✅ BEFORE AFTER SIDE TEXT -->
 <section class="before-after">
-<h2 style="text-align:center;">Before & After</h2>
-
-<div class="ba-item">
-<img src="Before.png">
-<img src="After.png">
-
-<div class="ba-text">
-<h3>Kitchen Transformation</h3>
-<p>Old empty space converted into a modern modular kitchen with storage and lighting.</p>
-</div>
-
+<h2>Before & After</h2>
+<div class="ba-container">
+<img src="Before.png" onclick="openImage(this.src)">
+<img src="After.png" onclick="openImage(this.src)">
 </div>
 </section>
 
@@ -358,8 +313,18 @@ text-decoration:none;
 <p>+91 9953251355</p>
 </footer>
 
-<div id="lightbox" onclick="closeImage()">
+<!-- ✅ NEW LIGHTBOX -->
+<div id="lightbox" onclick="closeImage(event)">
+<div class="lightbox-content">
+
 <img id="lightbox-img">
+
+<div class="lightbox-text">
+<h3 id="lb-title"></h3>
+<p id="lb-desc"></p>
+</div>
+
+</div>
 </div>
 
 <div class="whatsapp-float">
@@ -370,9 +335,38 @@ text-decoration:none;
 function openImage(src){
 document.getElementById("lightbox").style.display="flex";
 document.getElementById("lightbox-img").src=src;
+
+let title="", desc="";
+
+if(src.includes("Kitchen2")){
+title="Modern Kitchen";
+desc="Premium modular kitchen with smart storage.";
 }
-function closeImage(){
+else if(src.includes("Wardrobe2")){
+title="Wardrobe Design";
+desc="Stylish wardrobe with space-saving design.";
+}
+else if(src.includes("Interiors")){
+title="Full Interior";
+desc="Complete home interior solution.";
+}
+else if(src.includes("Before")){
+title="Before";
+desc="Old condition before renovation.";
+}
+else if(src.includes("After")){
+title="After";
+desc="Modern upgraded interior.";
+}
+
+document.getElementById("lb-title").innerText=title;
+document.getElementById("lb-desc").innerText=desc;
+}
+
+function closeImage(e){
+if(e.target.id==="lightbox"){
 document.getElementById("lightbox").style.display="none";
+}
 }
 </script>
 
