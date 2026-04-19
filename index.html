@@ -6,171 +6,80 @@
 <title>PointCraft Interiors</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-}
+body { margin:0; font-family:'Segoe UI'; }
 
 /* HEADER */
 header {
-    background: linear-gradient(to right, #000000, #1a1a1a);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
+display:flex;justify-content:space-between;
+padding:15px 50px;background:black;color:white;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img { height: 45px; }
-
-.logo-text span { color: gold; }
-
-nav a {
-    color: white;
-    margin-left: 25px;
-    text-decoration: none;
-}
+nav a {color:white;margin-left:25px;text-decoration:none;}
 
 /* HERO */
 .hero {
-    height: 80vh;
-    background: url('hero3.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+height:80vh;
+background:url('hero3.jpg') center/cover no-repeat;
+display:flex;align-items:center;justify-content:center;
 }
-
 .hero h1 {
-    background: rgba(0,0,0,0.5);
-    color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
+background:rgba(0,0,0,0.5);
+color:white;padding:15px 30px;border-radius:10px;
 }
 
 /* SERVICES */
 .services {
-    padding: 60px;
-    text-align: center;
-    background: #d9e6f2;
+padding:60px;text-align:center;background:#d9e6f2;
 }
-
 .service-box {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
 }
-
-.card {
-    width: 220px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: white;
-}
-
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
+.card { width:220px;background:white;border-radius:10px;overflow:hidden; }
+.card img { width:100%; height:150px; object-fit:cover; }
 
 /* ABOUT */
 .about {
-    padding: 70px;
-    background: linear-gradient(to right, #fdfcfb, #e2d1c3);
-    text-align: center;
+padding:70px;background:#eee;text-align:center;
 }
-
 .about-box {
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-    justify-content: center;
+display:flex;gap:40px;justify-content:center;flex-wrap:wrap;
 }
-
-.about-text {
-    max-width: 500px;
-    text-align: left;
-    line-height: 1.6;
-}
-
-.about-img img {
-    width: 350px;
-    border-radius: 15px;
-}
+.about-img img { width:300px;border-radius:10px; }
 
 /* WORK */
-.work, .before-after {
-    padding: 60px;
-    text-align: center;
-    background: #f5f1e8;
+.work,.before-after {
+padding:60px;text-align:center;background:#f5f1e8;
 }
-
 .work-box {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+display:flex;gap:25px;justify-content:center;flex-wrap:wrap;
 }
-
 .work img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    cursor: pointer;
+width:300px;height:200px;object-fit:cover;border-radius:10px;cursor:pointer;
 }
 
 /* BEFORE AFTER */
 .ba-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+display:flex;gap:25px;justify-content:center;flex-wrap:wrap;
 }
-
 .ba-container img {
-    width: 300px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
+width:300px;height:200px;object-fit:cover;border-radius:10px;
 }
 
 /* FOOTER */
 footer {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 30px;
+background:black;color:white;text-align:center;padding:30px;
 }
 
 /* LIGHTBOX */
 #lightbox {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9);
-    display: none;
-    justify-content: center;
-    align-items: center;
+position:fixed;width:100%;height:100%;
+background:black;display:none;justify-content:center;align-items:center;
 }
-
-#lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-}
+#lightbox img { max-width:90%; }
 
 /* WHATSAPP */
 .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
+position:fixed;bottom:20px;right:20px;
 }
 </style>
 </head>
@@ -178,89 +87,92 @@ footer {
 <body>
 
 <header>
-    <div class="logo">
-        <img src="logo1.png">
-        <div class="logo-text">Point<span>Craft</span> Interiors</div>
-    </div>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+<div>PointCraft Interiors</div>
+<nav>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-    <h1>Design Your Dream Space</h1>
+<h1>Design Your Dream Space</h1>
 </section>
 
 <section class="services">
-    <h2>Our Services</h2>
-    <div class="service-box">
-        <div class="card">
-            <img src="Kitchen.jpg">
-            <p>Modular Kitchen</p>
-        </div>
-        <div class="card">
-            <img src="Wardrobe.jpg">
-            <p>Wardrobe</p>
-        </div>
-        <div class="card">
-            <img src="Interior.jpg">
-            <p>Full Interior</p>
-        </div>
-        <div class="card">
-            <img src="Railing.jpg">
-            <p>Steel Work</p>
-        </div>
-    </div>
+<h2>Our Services</h2>
+
+<div class="service-box">
+
+<div class="card">
+<a href="https://wa.me/919953251355?text=Kitchen">
+<img src="Kitchen.jpg">
+</a>
+<p>Modular Kitchen</p>
+</div>
+
+<div class="card">
+<a href="https://wa.me/919953251355?text=Wardrobe">
+<img src="Wardrobe.jpg">
+</a>
+<p>Wardrobe</p>
+</div>
+
+<div class="card">
+<a href="https://wa.me/919953251355?text=Interior">
+<img src="Interior.jpg">
+</a>
+<p>Full Interior</p>
+</div>
+
+<div class="card">
+<a href="https://wa.me/919953251355?text=Steel Work">
+<img src="Railing.jpg">
+</a>
+<p>Steel Work</p>
+</div>
+
+</div>
 </section>
 
 <section class="about">
-    <h2>About Us</h2>
-    <div class="about-box">
-        <div class="about-text">
-            <p><b>PointCraft Interiors</b> transforms spaces into modern and functional designs.</p>
-            <p>We specialize in kitchens, wardrobes, and full home interiors.</p>
-            <p>We deliver quality work with timely completion.</p>
-        </div>
-        <div class="about-img">
-            <img src="Interior.jpg">
-        </div>
-    </div>
+<h2>About Us</h2>
+<div class="about-box">
+<div>
+<p><b>PointCraft Interiors</b> creates modern and functional designs.</p>
+<p>We specialize in kitchens, wardrobes, and home interiors.</p>
+</div>
+<div class="about-img">
+<img src="Interior.jpg">
+</div>
+</div>
 </section>
 
 <section class="work">
-    <h2>Our Work</h2>
-    <div class="work-box">
-        <img src="Kitchen2.jpg" onclick="openImage(this.src)">
-        <img src="Wardrobe2.jpg" onclick="openImage(this.src)">
-        <img src="Interiors.jpg" onclick="openImage(this.src)">
-    </div>
+<h2>Our Work</h2>
+<div class="work-box">
+<img src="Kitchen2.jpg" onclick="openImage(this.src)">
+<img src="Wardrobe2.jpg" onclick="openImage(this.src)">
+<img src="Interiors.jpg" onclick="openImage(this.src)">
+</div>
 </section>
 
 <section class="before-after">
-    <h2>Before & After</h2>
-    <div class="ba-container">
-        <div>
-            <p>Before</p>
-            <img src="Before.png">
-        </div>
-        <div>
-            <p>After</p>
-            <img src="After.png">
-        </div>
-    </div>
+<h2>Before & After</h2>
+<div class="ba-container">
+<div><p>Before</p><img src="Before.png"></div>
+<div><p>After</p><img src="After.png"></div>
+</div>
 </section>
 
 <footer>
-    <p>pointcraftinteriors@gmail.com</p>
-    <p>+91 9953251355</p>
+<p>pointcraftinteriors@gmail.com</p>
+<p>9953251355</p>
 </footer>
 
 <div id="lightbox" onclick="closeImage()">
-    <img id="lightbox-img">
+<img id="lightbox-img">
 </div>
 
 <div class="whatsapp-float">
@@ -269,11 +181,11 @@ footer {
 
 <script>
 function openImage(src){
-    document.getElementById("lightbox").style.display="flex";
-    document.getElementById("lightbox-img").src=src;
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=src;
 }
 function closeImage(){
-    document.getElementById("lightbox").style.display="none";
+document.getElementById("lightbox").style.display="none";
 }
 </script>
 
