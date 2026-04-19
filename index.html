@@ -6,45 +6,167 @@
 <title>PointCraft Interiors</title>
 
 <style>
-body {margin:0;font-family:'Segoe UI';}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
 
 /* HEADER */
 header {
-display:flex;justify-content:space-between;
-padding:15px 40px;background:black;color:white;
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
 }
 
-nav a {color:white;margin-left:20px;text-decoration:none;}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img { height: 45px; }
+
+.logo-text span { color: gold; }
+
+nav a {
+    color: white;
+    margin-left: 25px;
+    text-decoration: none;
+}
 
 /* HERO */
 .hero {
-height:90vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('hero3.jpg');
-background-size:cover;display:flex;align-items:center;justify-content:center;
-color:white;text-align:center;
+    height: 80vh;
+    background: url('hero3.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* SECTIONS */
-section {padding:60px;text-align:center;}
-
-.service-box,.work-box,.ba-container {
-display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
+.hero h1 {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
 }
 
-.card img,.work img,.ba-container img {
-width:300px;border-radius:10px;
+/* SERVICES */
+.services {
+    padding: 60px;
+    text-align: center;
+    background: #d9e6f2;
+}
+
+.service-box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* ABOUT */
+.about {
+    padding: 70px;
+    background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+    text-align: center;
+}
+
+.about-box {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.about-img img {
+    width: 350px;
+    border-radius: 15px;
+}
+
+/* WORK */
+.work, .before-after {
+    padding: 60px;
+    text-align: center;
+    background: #f5f1e8;
+}
+
+.work-box {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.work img {
+    width: 300px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* BEFORE AFTER */
+.ba-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.ba-container img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
 }
 
 /* LIGHTBOX */
 #lightbox {
-position:fixed;width:100%;height:100%;
-background:black;display:none;justify-content:center;align-items:center;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
-#lightbox img {max-width:90%;}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
 
 /* WHATSAPP */
 .whatsapp-float {
-position:fixed;bottom:20px;right:20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 </style>
 </head>
@@ -52,68 +174,89 @@ position:fixed;bottom:20px;right:20px;
 <body>
 
 <header>
-<div>PointCraft Interiors</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <div class="logo">
+        <img src="logo1.png">
+        <div class="logo-text">Point<span>Craft</span> Interiors</div>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-<h1>Transform Your Home with Interior Design</h1>
+    <h1>Design Your Dream Space</h1>
 </section>
 
-<!-- SERVICES -->
-<section>
-<h2>Services</h2>
-<div class="service-box">
-<div class="card"><img src="Kitchen.jpg"><p>Kitchen</p></div>
-<div class="card"><img src="Wardrobe.jpg"><p>Wardrobe</p></div>
-<div class="card"><img src="Interior.jpg"><p>Interior</p></div>
-</div>
+<section class="services">
+    <h2>Our Services</h2>
+    <div class="service-box">
+        <div class="card">
+            <img src="Kitchen.jpg">
+            <p>Modular Kitchen</p>
+        </div>
+        <div class="card">
+            <img src="Wardrobe.jpg">
+            <p>Wardrobe</p>
+        </div>
+        <div class="card">
+            <img src="Interior.jpg">
+            <p>Full Interior</p>
+        </div>
+        <div class="card">
+            <img src="Railing.jpg">
+            <p>Steel Work</p>
+        </div>
+    </div>
 </section>
 
-<!-- ABOUT -->
-<section>
-<h2>About Us</h2>
-<p>PointCraft Interiors creates modern, affordable, and premium interior solutions tailored to your lifestyle.</p>
+<section class="about">
+    <h2>About Us</h2>
+    <div class="about-box">
+        <div class="about-text">
+            <p><b>PointCraft Interiors</b> is dedicated to transforming living spaces into modern, functional environments.</p>
+            <p>We specialize in modular kitchens, wardrobes, and complete home interiors.</p>
+            <p>We focus on quality, timely delivery, and customer satisfaction.</p>
+        </div>
+        <div class="about-img">
+            <img src="Interior.jpg">
+        </div>
+    </div>
 </section>
 
-<!-- WORK -->
-<section>
-<h2>Our Work</h2>
-<div class="work-box">
-<img src="Kitchen2.jpg" onclick="openImage(this.src)">
-<img src="Wardrobe2.jpg" onclick="openImage(this.src)">
-<img src="Interiors.jpg" onclick="openImage(this.src)">
-</div>
+<section class="work">
+    <h2>Our Work</h2>
+    <div class="work-box">
+        <img src="Kitchen2.jpg" onclick="openImage(this.src)">
+        <img src="Wardrobe2.jpg" onclick="openImage(this.src)">
+        <img src="Interiors.jpg" onclick="openImage(this.src)">
+    </div>
 </section>
 
-<!-- BEFORE AFTER -->
-<section>
-<h2>Before & After</h2>
-<div class="ba-container">
-<img src="Before.png">
-<img src="After.png">
-</div>
-</section>
-
-<!-- TESTIMONIAL -->
-<section>
-<h2>Clients</h2>
-<p>“Amazing work!”</p>
+<section class="before-after">
+    <h2>Before & After</h2>
+    <div class="ba-container">
+        <div>
+            <p>Before</p>
+            <img src="Before.png">
+        </div>
+        <div>
+            <p>After</p>
+            <img src="After.png">
+        </div>
+    </div>
 </section>
 
 <footer>
-<p>pointcraftinteriors@gmail.com</p>
-<p>9953251355</p>
+    <p>pointcraftinteriors@gmail.com</p>
+    <p>+91 9953251355</p>
 </footer>
 
 <div id="lightbox" onclick="closeImage()">
-<img id="lightbox-img">
+    <img id="lightbox-img">
 </div>
 
 <div class="whatsapp-float">
@@ -122,11 +265,11 @@ position:fixed;bottom:20px;right:20px;
 
 <script>
 function openImage(src){
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=src;
+    document.getElementById("lightbox").style.display="flex";
+    document.getElementById("lightbox-img").src=src;
 }
 function closeImage(){
-document.getElementById("lightbox").style.display="none";
+    document.getElementById("lightbox").style.display="none";
 }
 </script>
 
