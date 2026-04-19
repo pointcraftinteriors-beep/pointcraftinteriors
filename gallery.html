@@ -1,71 +1,137 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Gallery</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - PointCraft Interiors</title>
+
 <style>
-body{margin:0;font-family:sans-serif}
-
-/* HEADER */
-header{background:black;color:white;display:flex;justify-content:space-between;padding:15px 40px}
-.logo span{color:gold}
-nav a{color:white;margin-left:20px;text-decoration:none}
-
-/* GALLERY */
-.gallery{padding:60px;text-align:center;background:#f5f1e8}
-.grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
-
-/* CARD */
-.item{
-width:300px;height:200px;
-position:relative;overflow:hidden;
-border-radius:12px;cursor:pointer;
+body {
+margin:0;
+font-family:'Segoe UI', sans-serif;
 }
 
-.item img{
-width:100%;height:100%;
+/* HEADER */
+header {
+background:black;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+}
+
+.logo {
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img {
+height:40px;
+}
+
+.logo-text span {
+color:gold;
+}
+
+nav a {
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+/* GALLERY */
+.gallery {
+padding:60px;
+text-align:center;
+background:#f5f1e8;
+}
+
+.gallery h1 {
+margin-bottom:30px;
+}
+
+.grid {
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+/* ITEM */
+.item {
+width:300px;
+height:200px;
+position:relative;
+overflow:hidden;
+border-radius:12px;
+cursor:pointer;
+}
+
+.item img {
+width:100%;
+height:100%;
 object-fit:cover;
 transition:0.4s;
 }
 
-/* HOVER */
-.item:hover img{transform:scale(1.1)}
-
-.overlay{
-position:absolute;
-top:0;left:0;width:100%;height:100%;
-background:rgba(0,0,0,0.5);
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-opacity:0;
-transition:0.3s;
-font-weight:bold;
+.item:hover img {
+transform:scale(1.1);
 }
 
-.item:hover .overlay{opacity:1}
+/* OVERLAY */
+.overlay {
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+font-size:18px;
+font-weight:bold;
+opacity:0;
+transition:0.3s;
+}
+
+.item:hover .overlay {
+opacity:1;
+}
 
 /* LIGHTBOX */
-#lightbox{
+#lightbox {
 position:fixed;
-top:0;left:0;width:100%;height:100%;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:rgba(0,0,0,0.9);
 display:none;
 justify-content:center;
 align-items:center;
+z-index:9999;
 }
 
-#lightbox img{
+#lightbox img {
 max-width:90%;
 max-height:90%;
 }
 
-/* WHATSAPP */
-.whatsapp{
-position:fixed;bottom:20px;right:20px;
-background:#25D366;color:white;
-padding:15px;border-radius:50%;
-font-size:20px;
+/* WHATSAPP BUTTON */
+.whatsapp {
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+text-decoration:none;
 }
 </style>
 </head>
@@ -73,7 +139,11 @@ font-size:20px;
 <body>
 
 <header>
-<div class="logo">Point<span>Craft</span> Interiors</div>
+<div class="logo">
+<img src="logo1.png">
+<div class="logo-text">Point<span>Craft</span> Interiors</div>
+</div>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -89,7 +159,7 @@ font-size:20px;
 
 <div class="item" onclick="openImg('Kitchen.jpg')">
 <img src="Kitchen.jpg">
-<div class="overlay">Kitchen</div>
+<div class="overlay">Modular Kitchen</div>
 </div>
 
 <div class="item" onclick="openImg('Kitchen2.jpg')">
@@ -99,7 +169,7 @@ font-size:20px;
 
 <div class="item" onclick="openImg('Wardrobe.jpg')">
 <img src="Wardrobe.jpg">
-<div class="overlay">Wardrobe</div>
+<div class="overlay">Wardrobe Design</div>
 </div>
 
 <div class="item" onclick="openImg('Wardrobe2.jpg')">
@@ -114,7 +184,7 @@ font-size:20px;
 
 <div class="item" onclick="openImg('Interiors.jpg')">
 <img src="Interiors.jpg">
-<div class="overlay">Interior</div>
+<div class="overlay">Interior Design</div>
 </div>
 
 <div class="item" onclick="openImg('Railing.jpg')">
@@ -125,17 +195,20 @@ font-size:20px;
 </div>
 </section>
 
+<!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeImg()">
 <img id="imgbox">
 </div>
 
-<div class="whatsapp">💬</div>
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/919953251355">💬</a>
 
 <script>
 function openImg(src){
 document.getElementById("lightbox").style.display="flex";
 document.getElementById("imgbox").src=src;
 }
+
 function closeImg(){
 document.getElementById("lightbox").style.display="none";
 }
