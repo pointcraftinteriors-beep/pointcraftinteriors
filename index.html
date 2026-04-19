@@ -22,19 +22,10 @@ align-items:center;
 gap:10px;
 }
 
-.logo img {
-height:40px;
-}
+.logo img { height:40px; }
 
-.logo-text {
-font-size:20px;
-font-weight:bold;
-color:white;
-}
-
-.logo-text span {
-color:gold;
-}
+.logo-text { font-size:20px; font-weight:bold; color:white; }
+.logo-text span { color:gold; }
 
 nav a {
 color:white;
@@ -94,9 +85,7 @@ object-fit:cover;
 transition:0.3s;
 }
 
-.card:hover img {
-transform:scale(1.05);
-}
+.card:hover img { transform:scale(1.05); }
 
 .card a {
 display:block;
@@ -128,61 +117,63 @@ width:300px;
 border-radius:10px;
 }
 
-/* WORK (IMPROVED ONLY) */
+/* ✅ WORK IMPROVED */
 .work {
 padding:60px;
-text-align:center;
 background:#f5f1e8;
 }
 
-.work-box {
+.work-item {
 display:flex;
-gap:25px;
-justify-content:center;
+align-items:center;
+gap:30px;
+margin-bottom:40px;
 flex-wrap:wrap;
 }
 
-.work img {
+.work-item img {
 width:300px;
 height:200px;
 object-fit:cover;
 border-radius:12px;
 cursor:pointer;
-transition:0.3s;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
-.work img:hover {
-transform:scale(1.05);
-box-shadow:0 12px 30px rgba(0,0,0,0.2);
+.work-text {
+max-width:400px;
 }
 
-/* BEFORE AFTER (IMPROVED ONLY) */
+.work-text h3 {
+margin:0 0 10px;
+}
+
+.work-text p {
+color:#555;
+}
+
+/* ✅ BEFORE AFTER IMPROVED */
 .before-after {
 padding:60px;
-text-align:center;
 background:#f5f1e8;
 }
 
-.ba-container {
+.ba-item {
 display:flex;
+align-items:center;
 gap:30px;
 justify-content:center;
 flex-wrap:wrap;
 }
 
-.ba-container img {
+.ba-item img {
 width:320px;
 height:220px;
 object-fit:cover;
 border-radius:15px;
-transition:0.3s;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
-.ba-container img:hover {
-transform:scale(1.05);
-box-shadow:0 12px 30px rgba(0,0,0,0.2);
+.ba-text {
+max-width:400px;
 }
 
 /* CONTACT */
@@ -309,20 +300,49 @@ text-decoration:none;
 </div>
 </section>
 
+<!-- ✅ WORK SIDE TEXT -->
 <section class="work">
-<h2>Our Work</h2>
-<div class="work-box">
+<h2 style="text-align:center;">Our Work</h2>
+
+<div class="work-item">
 <img src="Kitchen2.jpg" onclick="openImage(this.src)">
-<img src="Wardrobe2.jpg" onclick="openImage(this.src)">
-<img src="Interiors.jpg" onclick="openImage(this.src)">
+<div class="work-text">
+<h3>Modern Kitchen</h3>
+<p>Premium modular kitchen with clean finish and smart storage.</p>
 </div>
+</div>
+
+<div class="work-item">
+<img src="Wardrobe2.jpg" onclick="openImage(this.src)">
+<div class="work-text">
+<h3>Luxury Wardrobe</h3>
+<p>Space-saving wardrobe with sliding design and premium finish.</p>
+</div>
+</div>
+
+<div class="work-item">
+<img src="Interiors.jpg" onclick="openImage(this.src)">
+<div class="work-text">
+<h3>Full Interior</h3>
+<p>Complete home transformation with modern aesthetic look.</p>
+</div>
+</div>
+
 </section>
 
+<!-- ✅ BEFORE AFTER SIDE TEXT -->
 <section class="before-after">
-<h2>Before & After</h2>
-<div class="ba-container">
+<h2 style="text-align:center;">Before & After</h2>
+
+<div class="ba-item">
 <img src="Before.png">
 <img src="After.png">
+
+<div class="ba-text">
+<h3>Kitchen Transformation</h3>
+<p>Old empty space converted into a modern modular kitchen with storage and lighting.</p>
+</div>
+
 </div>
 </section>
 
