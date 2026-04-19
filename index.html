@@ -6,20 +6,21 @@
 <title>PointCraft Interiors</title>
 
 <style>
-body { margin:0; font-family:'Segoe UI'; }
+body { margin:0; font-family:'Segoe UI', Arial; }
 
 /* HEADER */
 header {
 background:#000;color:#fff;
 display:flex;justify-content:space-between;
-padding:15px 50px;
+padding:15px 40px;
 }
 nav a { color:white;margin-left:20px;text-decoration:none; }
 
 /* HERO */
 .hero {
 height:85vh;
-background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('Hero3.jpg');
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url('Hero3.jpg'); /* MUST BE SAME NAME */
 background-size:cover;
 background-position:center;
 display:flex;align-items:center;justify-content:center;
@@ -86,11 +87,9 @@ display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
 width:300px;height:200px;object-fit:cover;
 }
 
-/* CONTACT (UPDATED) */
+/* CONTACT (NO FORM) */
 .contact {
-padding:60px;
-text-align:center;
-background:#fff;
+padding:60px;text-align:center;
 }
 .contact a {
 display:inline-block;
@@ -100,7 +99,6 @@ background:#25D366;
 color:white;
 text-decoration:none;
 border-radius:8px;
-font-weight:bold;
 }
 
 /* FOOTER */
@@ -124,21 +122,19 @@ max-width:90%;
 max-height:90%;
 }
 
-/* WHATSAPP FLOAT FIXED */
+/* WHATSAPP FLOAT */
 .whatsapp-float {
 position:fixed;
 bottom:20px;
 right:20px;
-z-index:999;
 }
 .whatsapp-float a {
 background:#25D366;
 color:white;
-font-size:28px;
-padding:16px 20px;
+font-size:26px;
+padding:15px 18px;
 border-radius:50%;
 text-decoration:none;
-display:inline-block;
 }
 </style>
 </head>
@@ -161,7 +157,6 @@ display:inline-block;
 
 <section class="services">
 <h2>Our Services</h2>
-
 <div class="service-box">
 
 <div class="card">
@@ -195,8 +190,8 @@ display:inline-block;
 <h2>About Us</h2>
 <div class="about-box">
 <div>
-<p><b>PointCraft Interiors</b> creates modern and functional designs.</p>
-<p>We specialize in kitchens, wardrobes, and home interiors.</p>
+<p><b>PointCraft Interiors</b> transforms your home into modern designs.</p>
+<p>We specialize in kitchens, wardrobes and full interiors.</p>
 </div>
 <img src="Interior.jpg">
 </div>
@@ -219,13 +214,10 @@ display:inline-block;
 </div>
 </section>
 
-<!-- CONTACT UPDATED -->
 <section class="contact">
 <h2>Contact Us</h2>
-
-<p><b>Email:</b> pointcraftinteriors@gmail.com</p>
-<p><b>Phone:</b> +91 9953251355</p>
-
+<p>Email: pointcraftinteriors@gmail.com</p>
+<p>Phone: +91 9953251355</p>
 <a href="https://wa.me/919953251355">Chat on WhatsApp</a>
 </section>
 
