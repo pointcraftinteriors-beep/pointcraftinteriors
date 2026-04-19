@@ -6,65 +6,159 @@
 <title>PointCraft Interiors</title>
 
 <style>
-body { margin:0; font-family:Arial; }
+body { margin:0; font-family:'Segoe UI', Arial; }
 
 /* HEADER */
 header {
-background:black;color:white;
+background:#000;color:#fff;
 display:flex;justify-content:space-between;
+align-items:center;
 padding:15px 40px;
 }
+
+.logo { display:flex; align-items:center; gap:10px; }
+.logo img { height:40px; }
+
+.logo-text { font-size:20px; font-weight:bold; color:white; }
+.logo-text span { color:gold; }
 
 nav a { color:white; margin-left:20px; text-decoration:none; }
 
 /* HERO */
 .hero {
-height:90vh;
-background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-background-size:cover;
+height:85vh;
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+url('https://pointcraftinteriors-beep.github.io/pointcraftinteriors/hero3.jpg');
+background-size: cover;
+background-position: center;
 display:flex;
 align-items:center;
 justify-content:center;
 }
 
-.hero h1 { color:white; font-size:40px; }
-
-/* BEFORE AFTER */
-.before-after {
-padding:60px;
+.hero h1 {
+color:white;
+font-size:48px;
 text-align:center;
 }
 
-.ba-slider {
-position:relative;
-width:90%;
-max-width:700px;
-margin:auto;
+/* SERVICES (ENHANCED) */
+.services {
+padding:60px;
+text-align:center;
+background:linear-gradient(135deg,#d9e6f2,#ffffff);
 }
 
-.ba-slider img {
-width:100%;
+.service-box {
+display:flex;
+gap:25px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
-.ba-overlay {
-position:absolute;
-top:0;
-left:0;
-width:50%;
+.card {
+width:240px;
+background:white;
+border-radius:15px;
 overflow:hidden;
+transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
-.ba-overlay img {
+.card:hover {
+transform:translateY(-10px);
+box-shadow:0 12px 30px rgba(0,0,0,0.2);
+}
+
+.card img {
 width:100%;
+height:160px;
+object-fit:cover;
 }
 
-.ba-handle {
-position:absolute;
-top:0;
-left:50%;
-width:4px;
-height:100%;
+.card p {
+font-weight:bold;
+margin:10px 0;
+}
+
+.card a {
+display:block;
+margin:10px;
+padding:10px;
 background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+/* ABOUT */
+.about {
+padding:60px;
+text-align:center;
+background:#eee;
+}
+
+.about-box {
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.about img {
+width:300px;
+border-radius:10px;
+}
+
+/* WORK (ENHANCED) */
+.work {
+padding:60px;
+text-align:center;
+background:#f5f1e8;
+}
+
+.work-box {
+display:flex;
+gap:25px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.work img {
+width:300px;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.work img:hover {
+transform:scale(1.05);
+box-shadow:0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* BEFORE AFTER (SIMPLE SAFE) */
+.before-after {
+padding:60px;
+text-align:center;
+background:#f5f1e8;
+}
+
+.ba-container {
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.ba-container img {
+width:300px;
+height:200px;
+object-fit:cover;
+border-radius:10px;
 }
 
 /* CONTACT */
@@ -73,11 +167,57 @@ padding:60px;
 text-align:center;
 }
 
+.contact a {
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+/* FOOTER */
 footer {
 background:black;
 color:white;
-padding:20px;
 text-align:center;
+padding:30px;
+}
+
+/* LIGHTBOX */
+#lightbox {
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+#lightbox img {
+max-width:90%;
+max-height:90%;
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+position:fixed;
+bottom:20px;
+right:20px;
+}
+
+.whatsapp-float a {
+background:#25D366;
+color:white;
+font-size:26px;
+padding:15px 18px;
+border-radius:50%;
+text-decoration:none;
 }
 </style>
 </head>
@@ -85,12 +225,16 @@ text-align:center;
 <body>
 
 <header>
-<div>PointCraft Interiors</div>
+<div class="logo">
+<img src="logo.png">
+<div class="logo-text">Point<span>Craft</span> Interiors</div>
+</div>
+
 <nav>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Gallery</a>
-<a href="#">Contact</a>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
 </nav>
 </header>
 
@@ -98,48 +242,94 @@ text-align:center;
 <h1>Design Your Dream Space</h1>
 </section>
 
+<section class="services">
+<h2>Our Services</h2>
+
+<div class="service-box">
+
+<div class="card">
+<img src="Kitchen.jpg">
+<p>Modular Kitchen</p>
+<a href="https://wa.me/919953251355?text=Kitchen">Enquiry</a>
+</div>
+
+<div class="card">
+<img src="Wardrobe.jpg">
+<p>Wardrobe</p>
+<a href="https://wa.me/919953251355?text=Wardrobe">Enquiry</a>
+</div>
+
+<div class="card">
+<img src="Interior.jpg">
+<p>Full Interior</p>
+<a href="https://wa.me/919953251355?text=Interior">Enquiry</a>
+</div>
+
+<div class="card">
+<img src="Railing.jpg">
+<p>Steel Work</p>
+<a href="https://wa.me/919953251355?text=Steel Work">Enquiry</a>
+</div>
+
+</div>
+</section>
+
+<section class="about">
+<h2>About Us</h2>
+<div class="about-box">
+<div>
+<p><b>PointCraft Interiors</b> transforms your home into modern designs.</p>
+<p>We specialize in kitchens, wardrobes and full interiors.</p>
+</div>
+<img src="Interior.jpg">
+</div>
+</section>
+
+<section class="work">
+<h2>Our Work</h2>
+<div class="work-box">
+<img src="Kitchen2.jpg" onclick="openImage(this.src)">
+<img src="Wardrobe2.jpg" onclick="openImage(this.src)">
+<img src="Interiors.jpg" onclick="openImage(this.src)">
+</div>
+</section>
+
 <section class="before-after">
 <h2>Before & After</h2>
-
-<div class="ba-slider">
+<div class="ba-container">
 <img src="Before.png">
-<div class="ba-overlay">
 <img src="After.png">
 </div>
-<div class="ba-handle"></div>
-</div>
-
 </section>
 
 <section class="contact">
-<h2>Contact</h2>
-<p>+91 9953251355</p>
+<h2>Contact Us</h2>
+<p>Email: pointcraftinteriors@gmail.com</p>
+<p>Phone: +91 9953251355</p>
+<a href="https://wa.me/919953251355">Chat on WhatsApp</a>
 </section>
 
 <footer>
-<p>PointCraft Interiors</p>
+<p>pointcraftinteriors@gmail.com</p>
+<p>+91 9953251355</p>
 </footer>
 
+<div id="lightbox" onclick="closeImage()">
+<img id="lightbox-img">
+</div>
+
+<div class="whatsapp-float">
+<a href="https://wa.me/919953251355">💬</a>
+</div>
+
 <script>
-const slider = document.querySelector(".ba-slider");
-const overlay = document.querySelector(".ba-overlay");
-const handle = document.querySelector(".ba-handle");
-
-let isDragging = false;
-
-handle.onmousedown = () => isDragging = true;
-window.onmouseup = () => isDragging = false;
-
-window.onmousemove = (e) => {
-if (!isDragging) return;
-
-let rect = slider.getBoundingClientRect();
-let x = e.clientX - rect.left;
-
-let percent = (x / rect.width) * 100;
-overlay.style.width = percent + "%";
-handle.style.left = percent + "%";
-};
+function openImage(src){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=src;
+}
+function closeImage(){
+document.getElementById("lightbox").style.display="none";
+}
 </script>
 
 </body>
