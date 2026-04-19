@@ -13,23 +13,18 @@ header {
 background:#000;color:#fff;
 display:flex;justify-content:space-between;
 padding:15px 50px;
-position:sticky;top:0;
 }
 nav a { color:white;margin-left:20px;text-decoration:none; }
 
 /* HERO */
 .hero {
 height:85vh;
-background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-url('Hero3.jpg'); /* IMPORTANT */
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('Hero3.jpg');
 background-size:cover;
 background-position:center;
 display:flex;align-items:center;justify-content:center;
 }
-.hero h1 {
-color:white;
-font-size:40px;
-}
+.hero h1 { color:white;font-size:40px; }
 
 /* SERVICES */
 .services {
@@ -91,12 +86,29 @@ display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
 width:300px;height:200px;object-fit:cover;
 }
 
+/* CONTACT (UPDATED) */
+.contact {
+padding:60px;
+text-align:center;
+background:#fff;
+}
+.contact a {
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
 /* FOOTER */
 footer {
 background:black;color:white;text-align:center;padding:30px;
 }
 
-/* LIGHTBOX FIXED */
+/* LIGHTBOX */
 #lightbox {
 position:fixed;
 top:0;left:0;
@@ -112,10 +124,21 @@ max-width:90%;
 max-height:90%;
 }
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT FIXED */
 .whatsapp-float {
-position:fixed;bottom:20px;right:20px;
+position:fixed;
+bottom:20px;
+right:20px;
 z-index:999;
+}
+.whatsapp-float a {
+background:#25D366;
+color:white;
+font-size:28px;
+padding:16px 20px;
+border-radius:50%;
+text-decoration:none;
+display:inline-block;
 }
 </style>
 </head>
@@ -132,12 +155,10 @@ z-index:999;
 </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 <h1>Design Your Dream Space</h1>
 </section>
 
-<!-- SERVICES -->
 <section class="services">
 <h2>Our Services</h2>
 
@@ -170,7 +191,6 @@ z-index:999;
 </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about">
 <h2>About Us</h2>
 <div class="about-box">
@@ -182,7 +202,6 @@ z-index:999;
 </div>
 </section>
 
-<!-- WORK -->
 <section class="work">
 <h2>Our Work</h2>
 <div class="work-box">
@@ -192,7 +211,6 @@ z-index:999;
 </div>
 </section>
 
-<!-- BEFORE AFTER -->
 <section class="before-after">
 <h2>Before & After</h2>
 <div class="ba-container">
@@ -201,20 +219,25 @@ z-index:999;
 </div>
 </section>
 
+<!-- CONTACT UPDATED -->
+<section class="contact">
+<h2>Contact Us</h2>
+
+<p><b>Email:</b> pointcraftinteriors@gmail.com</p>
+<p><b>Phone:</b> +91 9953251355</p>
+
+<a href="https://wa.me/919953251355">Chat on WhatsApp</a>
+</section>
+
 <footer>
 <p>pointcraftinteriors@gmail.com</p>
 <p>+91 9953251355</p>
-<p>
-<a href="https://wa.me/919953251355" style="color:#25D366;">Chat on WhatsApp</a>
-</p>
 </footer>
 
-<!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeImage()">
 <img id="lightbox-img">
 </div>
 
-<!-- WHATSAPP FLOAT -->
 <div class="whatsapp-float">
 <a href="https://wa.me/919953251355">💬</a>
 </div>
