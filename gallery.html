@@ -1,113 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery - PointCraft Interiors</title>
-
+<title>Gallery</title>
 <style>
-body { margin:0; font-family:'Segoe UI'; }
+body{margin:0;font-family:sans-serif}
 
-/* HEADER SAME */
-header {
-background:black;color:white;
-display:flex;justify-content:space-between;
-align-items:center;padding:15px 40px;
-}
-.logo { display:flex;align-items:center;gap:10px; }
-.logo img { height:40px; }
-.logo-text span { color:gold; }
-nav a { color:white;margin-left:20px;text-decoration:none; }
+/* HEADER */
+header{background:black;color:white;display:flex;justify-content:space-between;padding:15px 40px}
+.logo span{color:gold}
+nav a{color:white;margin-left:20px;text-decoration:none}
 
 /* GALLERY */
-.gallery {
-padding:60px;
-text-align:center;
-background:#f5f1e8;
-}
-
-.gallery-grid {
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
-}
+.gallery{padding:60px;text-align:center;background:#f5f1e8}
+.grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
 
 /* CARD */
-.gallery-item {
-position:relative;
-width:300px;
-height:200px;
-overflow:hidden;
-border-radius:12px;
-cursor:pointer;
+.item{
+width:300px;height:200px;
+position:relative;overflow:hidden;
+border-radius:12px;cursor:pointer;
 }
 
-.gallery-item img {
-width:100%;
-height:100%;
+.item img{
+width:100%;height:100%;
 object-fit:cover;
 transition:0.4s;
 }
 
-/* HOVER EFFECT */
-.gallery-item:hover img {
-transform:scale(1.1);
-}
+/* HOVER */
+.item:hover img{transform:scale(1.1)}
 
-.overlay {
+.overlay{
 position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
+top:0;left:0;width:100%;height:100%;
 background:rgba(0,0,0,0.5);
-opacity:0;
-display:flex;
-align-items:center;
-justify-content:center;
 color:white;
-font-size:18px;
-font-weight:bold;
+display:flex;
+justify-content:center;
+align-items:center;
+opacity:0;
 transition:0.3s;
+font-weight:bold;
 }
 
-.gallery-item:hover .overlay {
-opacity:1;
-}
+.item:hover .overlay{opacity:1}
 
 /* LIGHTBOX */
-#lightbox {
+#lightbox{
 position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
+top:0;left:0;width:100%;height:100%;
 background:rgba(0,0,0,0.9);
 display:none;
 justify-content:center;
 align-items:center;
-z-index:9999;
 }
 
-#lightbox img {
+#lightbox img{
 max-width:90%;
 max-height:90%;
 }
 
-/* WHATSAPP FLOAT */
-.whatsapp-float {
-position:fixed;
-bottom:20px;
-right:20px;
-}
-.whatsapp-float a {
-background:#25D366;
-color:white;
-font-size:26px;
-padding:15px 18px;
-border-radius:50%;
-text-decoration:none;
+/* WHATSAPP */
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:15px;border-radius:50%;
+font-size:20px;
 }
 </style>
 </head>
@@ -115,11 +73,7 @@ text-decoration:none;
 <body>
 
 <header>
-<div class="logo">
-<img src="logo.png">
-<div class="logo-text">Point<span>Craft</span> Interiors</div>
-</div>
-
+<div class="logo">Point<span>Craft</span> Interiors</div>
 <nav>
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -131,39 +85,39 @@ text-decoration:none;
 <section class="gallery">
 <h1>Our Work Gallery</h1>
 
-<div class="gallery-grid">
+<div class="grid">
 
-<div class="gallery-item" onclick="openImage('Kitchen.jpg')">
+<div class="item" onclick="openImg('Kitchen.jpg')">
 <img src="Kitchen.jpg">
-<div class="overlay">Modular Kitchen</div>
+<div class="overlay">Kitchen</div>
 </div>
 
-<div class="gallery-item" onclick="openImage('Kitchen2.jpg')">
+<div class="item" onclick="openImg('Kitchen2.jpg')">
 <img src="Kitchen2.jpg">
 <div class="overlay">Modern Kitchen</div>
 </div>
 
-<div class="gallery-item" onclick="openImage('Wardrobe.jpg')">
+<div class="item" onclick="openImg('Wardrobe.jpg')">
 <img src="Wardrobe.jpg">
-<div class="overlay">Wardrobe Design</div>
+<div class="overlay">Wardrobe</div>
 </div>
 
-<div class="gallery-item" onclick="openImage('Wardrobe2.jpg')">
+<div class="item" onclick="openImg('Wardrobe2.jpg')">
 <img src="Wardrobe2.jpg">
 <div class="overlay">Luxury Wardrobe</div>
 </div>
 
-<div class="gallery-item" onclick="openImage('Interior.jpg')">
+<div class="item" onclick="openImg('Interior.jpg')">
 <img src="Interior.jpg">
 <div class="overlay">Living Room</div>
 </div>
 
-<div class="gallery-item" onclick="openImage('Interiors.jpg')">
+<div class="item" onclick="openImg('Interiors.jpg')">
 <img src="Interiors.jpg">
-<div class="overlay">Interior Design</div>
+<div class="overlay">Interior</div>
 </div>
 
-<div class="gallery-item" onclick="openImage('Railing.jpg')">
+<div class="item" onclick="openImg('Railing.jpg')">
 <img src="Railing.jpg">
 <div class="overlay">Steel Work</div>
 </div>
@@ -171,22 +125,18 @@ text-decoration:none;
 </div>
 </section>
 
-<!-- LIGHTBOX -->
-<div id="lightbox" onclick="closeImage()">
-<img id="lightbox-img">
+<div id="lightbox" onclick="closeImg()">
+<img id="imgbox">
 </div>
 
-<!-- FLOAT -->
-<div class="whatsapp-float">
-<a href="https://wa.me/919953251355">💬</a>
-</div>
+<div class="whatsapp">💬</div>
 
 <script>
-function openImage(src){
+function openImg(src){
 document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=src;
+document.getElementById("imgbox").src=src;
 }
-function closeImage(){
+function closeImg(){
 document.getElementById("lightbox").style.display="none";
 }
 </script>
