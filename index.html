@@ -120,7 +120,14 @@ width:300px;
 height:200px;
 object-fit:cover;
 border-radius:12px;
-cursor:pointer;
+cursor:zoom-in;
+transition:0.3s;
+}
+
+/* ✅ HOVER ADDED */
+.work img:hover {
+transform:scale(1.08);
+box-shadow:0 12px 30px rgba(0,0,0,0.25);
 }
 
 /* BEFORE AFTER */
@@ -142,6 +149,14 @@ width:320px;
 height:220px;
 object-fit:cover;
 border-radius:15px;
+cursor:zoom-in;
+transition:0.3s;
+}
+
+/* ✅ HOVER ADDED */
+.ba-container img:hover {
+transform:scale(1.08);
+box-shadow:0 12px 30px rgba(0,0,0,0.25);
 }
 
 /* CONTACT */
@@ -168,7 +183,7 @@ text-align:center;
 padding:30px;
 }
 
-/* ✅ IMPROVED LIGHTBOX */
+/* LIGHTBOX */
 #lightbox {
 position:fixed;
 top:0;
@@ -313,7 +328,7 @@ text-decoration:none;
 <p>+91 9953251355</p>
 </footer>
 
-<!-- ✅ NEW LIGHTBOX -->
+<!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeImage(event)">
 <div class="lightbox-content">
 
