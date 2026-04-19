@@ -97,9 +97,29 @@ display:flex;
 gap:30px;
 justify-content:center;
 flex-wrap:wrap;
+align-items:center;
 }
 
-.about img { width:300px; border-radius:10px; }
+.about-text {
+max-width:400px;
+text-align:left;
+line-height:1.6;
+}
+
+.about-text b {
+font-size:20px;
+}
+
+.about-text p {
+color:#444;
+margin:10px 0;
+}
+
+.about img {
+width:300px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
 
 /* WORK */
 .work {
@@ -120,14 +140,14 @@ width:300px;
 height:200px;
 object-fit:cover;
 border-radius:12px;
-cursor:zoom-in;
+cursor:pointer;
 transition:0.3s;
 }
 
-/* ✅ HOVER ADDED */
+/* ✅ FIXED HOVER (NO ZOOM CURSOR, LIFT EFFECT) */
 .work img:hover {
-transform:scale(1.08);
-box-shadow:0 12px 30px rgba(0,0,0,0.25);
+transform:scale(1.05) translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
 }
 
 /* BEFORE AFTER */
@@ -149,14 +169,13 @@ width:320px;
 height:220px;
 object-fit:cover;
 border-radius:15px;
-cursor:zoom-in;
 transition:0.3s;
 }
 
-/* ✅ HOVER ADDED */
+/* ✅ SAME HOVER FIX */
 .ba-container img:hover {
-transform:scale(1.08);
-box-shadow:0 12px 30px rgba(0,0,0,0.25);
+transform:scale(1.05) translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.3);
 }
 
 /* CONTACT */
@@ -291,9 +310,9 @@ text-decoration:none;
 <section class="about">
 <h2>About Us</h2>
 <div class="about-box">
-<div>
-<p><b>PointCraft Interiors</b> transforms your home into modern designs.</p>
-<p>We specialize in kitchens, wardrobes and full interiors.</p>
+<div class="about-text">
+<p><b>PointCraft Interiors</b> is dedicated to transforming ordinary spaces into modern, elegant and functional interiors.</p>
+<p>We specialize in modular kitchens, wardrobes and complete home interiors with a focus on quality, smart design and customer satisfaction.</p>
 </div>
 <img src="Interior.jpg">
 </div>
@@ -328,17 +347,13 @@ text-decoration:none;
 <p>+91 9953251355</p>
 </footer>
 
-<!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeImage(event)">
 <div class="lightbox-content">
-
 <img id="lightbox-img">
-
 <div class="lightbox-text">
 <h3 id="lb-title"></h3>
 <p id="lb-desc"></p>
 </div>
-
 </div>
 </div>
 
