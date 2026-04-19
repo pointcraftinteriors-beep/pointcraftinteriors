@@ -43,32 +43,31 @@ text-decoration:none;
 
 /* GALLERY */
 .gallery {
-padding:60px;
+padding:80px 60px;
 text-align:center;
 background:#f5f1e8;
 }
 
 .gallery h1 {
-margin-bottom:40px;
+margin-bottom:50px;
+font-size:32px;
 }
 
 /* GRID */
 .grid {
-display:flex;
-flex-wrap:wrap;
-gap:25px;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
+gap:30px;
 }
 
 /* CARD */
 .item {
-width:300px;
-height:200px;
+height:260px;
 position:relative;
 overflow:hidden;
-border-radius:15px;
+border-radius:18px;
 cursor:pointer;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
 transition:0.3s;
 }
 
@@ -76,43 +75,45 @@ transition:0.3s;
 width:100%;
 height:100%;
 object-fit:cover;
-transition:0.4s;
+transition:0.5s;
 }
 
-/* HOVER EFFECT */
 .item:hover img {
 transform:scale(1.1);
 }
 
 .item:hover {
-transform:translateY(-6px);
-box-shadow:0 20px 40px rgba(0,0,0,0.3);
+transform:translateY(-8px);
+box-shadow:0 25px 50px rgba(0,0,0,0.3);
 }
 
-/* OVERLAY */
+/* OVERLAY (SAME FOR ALL) */
 .overlay {
 position:absolute;
 top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.55);
+background:rgba(0,0,0,0.6);
 display:flex;
 flex-direction:column;
-align-items:center;
 justify-content:center;
+align-items:center;
 color:white;
-font-size:18px;
-font-weight:bold;
 opacity:0;
 transition:0.3s;
 text-align:center;
 }
 
-.overlay small {
-font-size:12px;
-margin-top:6px;
-opacity:0.85;
+.overlay h3 {
+margin:0;
+font-size:22px;
+}
+
+.overlay p {
+margin-top:8px;
+font-size:14px;
+opacity:0.9;
 }
 
 .item:hover .overlay {
@@ -174,59 +175,61 @@ text-decoration:none;
 
 <div class="grid">
 
+<!-- SAME STRUCTURE FOR ALL -->
+
 <div class="item" onclick="openImg('Kitchen.jpg')">
 <img src="Kitchen.jpg">
 <div class="overlay">
-Modular Kitchen
-<small>Smart Storage Design</small>
+<h3>Interior Design</h3>
+<p>Modern & Premium Finish</p>
 </div>
 </div>
 
 <div class="item" onclick="openImg('Kitchen2.jpg')">
 <img src="Kitchen2.jpg">
 <div class="overlay">
-Modern Kitchen
-<small>Premium Finish</small>
+<h3>Interior Design</h3>
+<p>Modern & Premium Finish</p>
 </div>
 </div>
 
 <div class="item" onclick="openImg('Wardrobe.jpg')">
 <img src="Wardrobe.jpg">
 <div class="overlay">
-Wardrobe Design
-<small>Luxury Sliding</small>
+<h3>Interior Design</h3>
+<p>Modern & Premium Finish</p>
 </div>
 </div>
 
 <div class="item" onclick="openImg('Wardrobe2.jpg')">
 <img src="Wardrobe2.jpg">
 <div class="overlay">
-Luxury Wardrobe
-<small>Modern Storage</small>
+<h3>Interior Design</h3>
+<p>Modern & Premium Finish</p>
 </div>
 </div>
 
 <div class="item" onclick="openImg('Interior.jpg')">
 <img src="Interior.jpg">
 <div class="overlay">
-Living Room
-<small>Modern Interior</small>
+<h3>Interior Design</h3>
+<p>Modern & Premium Finish</p>
 </div>
 </div>
 
 <div class="item" onclick="openImg('Interiors.jpg')">
 <img src="Interiors.jpg">
 <div class="overlay">
-Interior Design
-<small>Elegant Finish</small>
+<h3>Interior Design</h3>
+<p>Modern & Premium Finish</p>
 </div>
 </div>
 
 <div class="item" onclick="openImg('Railing.jpg')">
 <img src="Railing.jpg">
 <div class="overlay">
-Steel Work
-<small>Strong & Stylish</small>
+<h3>Interior Design</h3>
+<p>Modern & Premium Finish</p>
 </div>
 </div>
 
