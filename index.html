@@ -12,85 +12,170 @@ body { margin:0; font-family:'Segoe UI', Arial; }
 header {
 background:#000;color:#fff;
 display:flex;justify-content:space-between;
+align-items:center;
 padding:15px 40px;
 }
-nav a { color:white;margin-left:20px;text-decoration:none; }
+
+.logo {
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img {
+height:40px;
+}
+
+.logo-text {
+font-size:20px;
+font-weight:bold;
+color:white;
+}
+
+.logo-text span {
+color:gold;
+}
+
+nav a {
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
 
 /* HERO */
 .hero {
 height:85vh;
 background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-url('Hero3.jpg'); /* MUST BE SAME NAME */
+url('Hero3.jpg');
 background-size:cover;
 background-position:center;
-display:flex;align-items:center;justify-content:center;
+display:flex;
+align-items:center;
+justify-content:center;
 }
-.hero h1 { color:white;font-size:40px; }
+
+.hero h1 {
+color:white;
+font-size:48px;
+text-align:center;
+}
 
 /* SERVICES */
 .services {
-padding:60px;text-align:center;background:#d9e6f2;
+padding:60px;
+text-align:center;
+background:#d9e6f2;
 }
+
 .service-box {
-display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
 }
+
 .card {
-width:220px;background:white;border-radius:10px;
-overflow:hidden;transition:0.3s;
+width:220px;
+background:white;
+border-radius:10px;
+overflow:hidden;
+transition:0.3s;
 }
+
 .card:hover {
 transform:translateY(-10px);
 box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
+
 .card img {
-width:100%;height:150px;object-fit:cover;
+width:100%;
+height:150px;
+object-fit:cover;
 transition:0.3s;
 }
-.card:hover img { transform:scale(1.05); }
+
+.card:hover img {
+transform:scale(1.05);
+}
 
 .card a {
-display:block;margin:10px;padding:8px;
-background:#25D366;color:white;text-decoration:none;
-border-radius:5px;font-weight:bold;
+display:block;
+margin:10px;
+padding:8px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
 }
 
 /* ABOUT */
 .about {
-padding:60px;text-align:center;background:#eee;
+padding:60px;
+text-align:center;
+background:#eee;
 }
+
 .about-box {
-display:flex;gap:30px;justify-content:center;flex-wrap:wrap;
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
 }
-.about img { width:300px;border-radius:10px; }
+
+.about img {
+width:300px;
+border-radius:10px;
+}
 
 /* WORK */
 .work {
-padding:60px;text-align:center;background:#f5f1e8;
+padding:60px;
+text-align:center;
+background:#f5f1e8;
 }
+
 .work-box {
-display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
 }
+
 .work img {
-width:300px;height:200px;
-object-fit:cover;border-radius:10px;
+width:300px;
+height:200px;
+object-fit:cover;
+border-radius:10px;
 cursor:pointer;
 }
 
 /* BEFORE AFTER */
 .before-after {
-padding:60px;text-align:center;background:#f5f1e8;
-}
-.ba-container {
-display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
-}
-.ba-container img {
-width:300px;height:200px;object-fit:cover;
+padding:60px;
+text-align:center;
+background:#f5f1e8;
 }
 
-/* CONTACT (NO FORM) */
-.contact {
-padding:60px;text-align:center;
+.ba-container {
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
 }
+
+.ba-container img {
+width:300px;
+height:200px;
+object-fit:cover;
+}
+
+/* CONTACT */
+.contact {
+padding:60px;
+text-align:center;
+}
+
 .contact a {
 display:inline-block;
 margin:10px;
@@ -103,20 +188,26 @@ border-radius:8px;
 
 /* FOOTER */
 footer {
-background:black;color:white;text-align:center;padding:30px;
+background:black;
+color:white;
+text-align:center;
+padding:30px;
 }
 
 /* LIGHTBOX */
 #lightbox {
 position:fixed;
-top:0;left:0;
-width:100%;height:100%;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:rgba(0,0,0,0.95);
 display:none;
 justify-content:center;
 align-items:center;
 z-index:9999;
 }
+
 #lightbox img {
 max-width:90%;
 max-height:90%;
@@ -128,6 +219,7 @@ position:fixed;
 bottom:20px;
 right:20px;
 }
+
 .whatsapp-float a {
 background:#25D366;
 color:white;
@@ -142,7 +234,11 @@ text-decoration:none;
 <body>
 
 <header>
-<div>PointCraft Interiors</div>
+<div class="logo">
+<img src="logo.png">
+<div class="logo-text">Point<span>Craft</span> Interiors</div>
+</div>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="services.html">Services</a>
@@ -157,6 +253,7 @@ text-decoration:none;
 
 <section class="services">
 <h2>Our Services</h2>
+
 <div class="service-box">
 
 <div class="card">
